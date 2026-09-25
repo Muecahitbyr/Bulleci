@@ -1,0 +1,109 @@
+.process {
+  position: relative;
+  background: linear-gradient(var(--bg), var(--bg-elev));
+}
+
+.process__pin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(40px, 6vh, 64px);
+  padding-block: var(--section-y);
+  overflow: hidden;
+}
+
+.process__viewport {
+  padding-inline: var(--gutter);
+}
+
+.process__track {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+  padding: clamp(28px, 3vw, 40px);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(ellipse 80% 60% at 100% 0%, rgb(41 151 255 / 0.1), transparent 70%),
+    var(--surface);
+}
+
+.step--final {
+  background:
+    radial-gradient(ellipse 90% 80% at 100% 0%, rgb(124 92 255 / 0.3), transparent 70%),
+    radial-gradient(ellipse 80% 70% at 0% 100%, rgb(41 151 255 / 0.2), transparent 70%),
+    var(--surface);
+}
+
+.step__num {
+  font-size: clamp(4rem, 8vw, 6.5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-bottom: clamp(48px, 10vh, 120px);
+}
+
+.step__title {
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 10px;
+}
+
+.step__text {
+  color: var(--text-2);
+  max-width: 360px;
+}
+
+.process__progress {
+  display: none;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--line);
+  overflow: hidden;
+}
+
+.process__progress span {
+  display: block;
+  height: 100%;
+  background: var(--gradient);
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+@media (min-width: 900px) {
+  .process__pin {
+    min-height: 100svh;
+    padding-block: calc(var(--nav-h) + 40px) 56px;
+  }
+
+  .process__viewport {
+    padding-left: max(var(--gutter), calc((100vw - var(--container)) / 2));
+  }
+
+  .process__track {
+    flex-direction: row;
+    width: max-content;
+    gap: 24px;
+  }
+
+  .step {
+    width: clamp(340px, 34vw, 460px);
+    min-height: clamp(340px, 46vh, 460px);
+  }
+
+  .process__progress {
+    display: block;
+  }
+}

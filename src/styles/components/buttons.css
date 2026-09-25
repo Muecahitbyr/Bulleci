@@ -1,0 +1,81 @@
+.btn {
+  --btn-bg: transparent;
+  --btn-fg: var(--text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35em;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: var(--pill);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  transition:
+    transform 0.35s var(--ease-out),
+    background-color 0.25s,
+    box-shadow 0.35s var(--ease-out),
+    color 0.25s;
+}
+
+.btn:hover {
+  transform: translateY(-1px) scale(1.02);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn--primary {
+  --btn-bg: var(--blue-strong);
+  --btn-fg: #fff;
+}
+
+.btn--primary:hover {
+  --btn-bg: #0077ed;
+  box-shadow: 0 10px 30px -10px rgb(0 113 227 / 0.7);
+}
+
+.btn--ghost {
+  --btn-fg: var(--blue);
+  padding-inline: 14px;
+}
+
+.btn--ghost:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.btn--dark {
+  --btn-bg: var(--light-text);
+  --btn-fg: #fff;
+}
+
+.btn--dark:hover {
+  --btn-bg: #000;
+}
+
+.btn--ghost-dark {
+  --btn-fg: var(--blue-strong);
+  padding-inline: 14px;
+}
+
+.btn--ghost-dark:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.btn--sm {
+  min-height: 32px;
+  padding: 0 14px;
+  font-size: 0.8125rem;
+}
+
+.btn--lg {
+  min-height: 56px;
+  padding: 0 30px;
+  font-size: 1.125rem;
+}

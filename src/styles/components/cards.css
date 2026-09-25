@@ -1,0 +1,90 @@
+.card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(24px, 3vw, 36px);
+  transition:
+    border-color 0.4s,
+    transform 0.6s var(--ease-out);
+}
+
+/* Lichtkegel, der dem Mauszeiger folgt */
+.card[data-spotlight]::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    420px circle at var(--mx, 50%) var(--my, -20%),
+    rgb(41 151 255 / 0.14),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.card[data-spotlight]:hover::before {
+  opacity: 1;
+}
+
+.card[data-spotlight]:hover {
+  border-color: var(--line-strong);
+}
+
+.card__icon {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background: rgb(41 151 255 / 0.12);
+  fill: none;
+  stroke: var(--blue);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.card__title {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.card__title--lg {
+  font-size: clamp(1.9rem, 3.6vw, 3rem);
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+
+.card__text {
+  color: var(--text-2);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.card__text + .link-arrow {
+  margin-top: 16px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.chips li {
+  padding: 7px 14px;
+  border-radius: var(--pill);
+  border: 1px solid var(--line-strong);
+  font-size: var(--fs-small);
+  color: var(--text);
+  background: rgb(255 255 255 / 0.03);
+}

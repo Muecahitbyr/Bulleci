@@ -1,0 +1,63 @@
+.eyebrow {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-2);
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.lead {
+  font-size: var(--fs-lead);
+  line-height: 1.45;
+  color: var(--text-2);
+  letter-spacing: -0.01em;
+  text-wrap: pretty;
+}
+
+.text-muted {
+  color: var(--text-3);
+}
+
+.text-gradient {
+  background: var(--gradient);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-drift 8s var(--ease-in-out) infinite alternate;
+}
+
+@keyframes gradient-drift {
+  to {
+    background-position: 100% 0;
+  }
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  color: var(--blue);
+  font-weight: 500;
+}
+
+.link-arrow span {
+  transition: transform var(--dur) var(--ease-out);
+}
+
+.link-arrow:hover span {
+  transform: translateX(4px);
+}
+
+.link-arrow:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

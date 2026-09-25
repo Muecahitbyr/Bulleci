@@ -1,0 +1,11 @@
+.intro__text {
+  font-size: clamp(1.75rem, 4.2vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  text-wrap: pretty;
+}
+
+.hl-word {
+  display: inline;
+}

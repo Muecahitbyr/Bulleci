@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Nach dem Go-live die echte Domain eintragen:
+# Sitemap: https://www.IHRE-DOMAIN.de/sitemap.xml

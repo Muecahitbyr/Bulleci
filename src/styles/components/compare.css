@@ -1,0 +1,111 @@
+/* Vorher/Nachher-Vergleich */
+.compare {
+  --pos: 50%;
+  position: relative;
+  aspect-ratio: 10 / 7;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #030b2a;
+  box-shadow:
+    0 40px 120px -40px rgb(41 151 255 / 0.45),
+    0 0 0 1px var(--line);
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.compare__layer {
+  position: absolute;
+  inset: 0;
+}
+
+.compare__layer svg {
+  width: 100%;
+  height: 100%;
+}
+
+.compare__layer--before {
+  clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+}
+
+.compare__label {
+  position: absolute;
+  top: 18px;
+  padding: 6px 12px;
+  border-radius: var(--pill);
+  background: rgb(0 0 0 / 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.compare__label--left { left: 18px; }
+.compare__label--right { right: 18px; }
+
+.compare__handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--pos);
+  width: 2px;
+  margin-left: -1px;
+  background: rgb(255 255 255 / 0.9);
+  box-shadow: 0 0 20px rgb(255 255 255 / 0.5);
+  pointer-events: none;
+}
+
+.compare__knob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  translate: -50% -50%;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 0.95);
+  box-shadow: 0 8px 30px rgb(0 0 0 / 0.35);
+  transition: scale 0.3s var(--ease-out);
+}
+
+.compare__knob svg {
+  width: 22px;
+  fill: none;
+  stroke: #1d1d1f;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Unsichtbarer Range-Input über der gesamten Fläche = Maus, Touch & Tastatur */
+.compare__range {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+}
+
+.compare__range:focus-visible + .compare__note,
+.compare:has(.compare__range:focus-visible) {
+  outline: 2px solid var(--blue);
+  outline-offset: 4px;
+}
+
+.compare:has(.compare__range:active) .compare__knob {
+  scale: 0.9;
+}
+
+.compare__note {
+  position: absolute;
+  bottom: 14px;
+  right: 18px;
+  font-size: 0.6875rem;
+  color: rgb(255 255 255 / 0.5);
+  pointer-events: none;
+}

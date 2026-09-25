@@ -1,0 +1,146 @@
+.contact__grid {
+  display: grid;
+  gap: 16px;
+}
+
+.contact__hours-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.contact__hours-head .card__title {
+  margin: 0;
+}
+
+.hours th,
+.hours td {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  font-weight: 500;
+  vertical-align: top;
+}
+
+.hours td {
+  text-align: right;
+  color: var(--text-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.hours tr:last-child th,
+.hours tr:last-child td {
+  border-bottom: 0;
+}
+
+.hours tr.is-closed td {
+  color: var(--text-3);
+}
+
+.hours tr.is-today th,
+.hours tr.is-today td {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.hours__today {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: var(--pill);
+  background: rgb(41 151 255 / 0.16);
+  color: var(--blue);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  vertical-align: 2px;
+}
+
+.contact__note {
+  margin-top: 16px;
+  font-size: var(--fs-small);
+  color: var(--text-3);
+}
+
+.contact__side {
+  display: grid;
+  gap: 16px;
+}
+
+.contact__card .card__text {
+  margin-bottom: 14px;
+}
+
+.contact__phone {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+/* Karte (Zwei-Klick-Lösung) */
+.map {
+  padding: 0;
+  min-height: 420px;
+  display: grid;
+}
+
+.map__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 40px 24px;
+  text-align: center;
+  background-image:
+    radial-gradient(ellipse 50% 60% at 50% 50%, rgb(41 151 255 / 0.12), transparent 70%),
+    linear-gradient(rgb(255 255 255 / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.04) 1px, transparent 1px);
+  background-size: auto, 40px 40px, 40px 40px;
+}
+
+.map__pin {
+  width: 44px;
+  fill: rgb(41 151 255 / 0.2);
+  stroke: var(--blue);
+  stroke-width: 1.5;
+  margin-bottom: 6px;
+  animation: float 3s var(--ease-in-out) infinite alternate;
+}
+
+.map__title {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.map__text {
+  max-width: 380px;
+  color: var(--text-2);
+  font-size: var(--fs-small);
+  margin-bottom: 8px;
+}
+
+.map__text a {
+  color: var(--blue);
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  border: 0;
+  filter: invert(0.92) hue-rotate(180deg) saturate(0.7);
+}
+
+@media (min-width: 900px) {
+  .contact__grid {
+    grid-template-columns: 1.3fr 1fr;
+  }
+
+  .map {
+    grid-column: 1 / -1;
+  }
+}

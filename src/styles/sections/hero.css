@@ -1,0 +1,208 @@
+.hero {
+  position: relative;
+  height: 100svh;
+  min-height: 640px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-top: calc(var(--nav-h) + clamp(28px, 7vh, 80px));
+}
+
+/* Hintergrund-Ebenen (Parallax) */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.orb--blue {
+  width: 70vmax;
+  height: 70vmax;
+  left: -20vmax;
+  top: 10%;
+  background: radial-gradient(circle, rgb(0 88 255 / 0.35), transparent 62%);
+}
+
+.orb--violet {
+  width: 60vmax;
+  height: 60vmax;
+  right: -22vmax;
+  top: -10%;
+  background: radial-gradient(circle, rgb(124 92 255 / 0.28), transparent 62%);
+}
+
+.orb--cyan {
+  width: 40vmax;
+  height: 40vmax;
+  left: 35%;
+  bottom: -25vmax;
+  background: radial-gradient(circle, rgb(90 200 250 / 0.22), transparent 62%);
+}
+
+.hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgb(255 255 255 / 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.045) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 70% 55% at 50% 70%, #000, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 55% at 50% 70%, #000, transparent 75%);
+}
+
+.hero__stage {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-origin: 50% 0;
+}
+
+.rating-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px 6px 12px;
+  margin-bottom: 22px;
+  border-radius: var(--pill);
+  border: 1px solid var(--line-strong);
+  background: rgb(255 255 255 / 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-size: var(--fs-small);
+  color: var(--text-2);
+  transition: border-color 0.3s;
+}
+
+.rating-chip:hover {
+  border-color: rgb(255 255 255 / 0.3);
+}
+
+.rating-chip strong {
+  color: var(--text);
+}
+
+.rating-chip__stars {
+  color: #ffcc00;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+.hero__title {
+  font-size: var(--fs-hero);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin-bottom: 22px;
+}
+
+/* Maske für das zeilenweise Hochfahren */
+.hero__title .line {
+  display: block;
+  overflow: hidden;
+  padding: 0.02em 0.06em 0.1em;
+}
+
+.hero__title .line > span {
+  display: inline-block;
+}
+
+.hero__lead {
+  max-width: 640px;
+  font-size: var(--fs-lead);
+  color: var(--text-2);
+  line-height: 1.45;
+  text-wrap: balance;
+  margin-bottom: 30px;
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero__car {
+  position: relative;
+  z-index: 1;
+  width: min(1080px, 118vw);
+  margin-top: auto;
+  margin-bottom: 64px;
+  transform-origin: 50% 70%;
+  will-change: transform;
+}
+
+.car {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.scroll-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  translate: -50% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  z-index: 2;
+}
+
+.scroll-hint__line {
+  width: 1px;
+  height: 28px;
+  background: linear-gradient(var(--text-2), transparent);
+  animation: scroll-hint 2s var(--ease-in-out) infinite;
+  transform-origin: top;
+}
+
+@keyframes scroll-hint {
+  0% { transform: scaleY(0); }
+  50% { transform: scaleY(1); }
+  100% { transform: scaleY(1); opacity: 0; }
+}
+
+@media (max-width: 699px) {
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero__lead {
+    font-size: 1.0625rem;
+  }
+
+  .hero__car {
+    margin-bottom: 64px;
+  }
+}
+
+/* Desktop: Auto skaliert mit der verfügbaren Höhe unter dem Text (SVG-Verhältnis 2.8:1) */
+@media (min-width: 700px) {
+  .hero__car {
+    width: clamp(540px, calc((100svh - 660px) * 2.8), 1040px);
+  }
+}

@@ -1,0 +1,43 @@
+.gloss {
+  position: relative;
+  height: 100svh;
+  overflow: hidden;
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgb(41 151 255 / 0.12), transparent 70%), var(--bg);
+}
+
+.gloss__stage {
+  height: 100%;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding-inline: var(--gutter);
+}
+
+.gloss__word {
+  font-size: clamp(5.5rem, 24vw, 22rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  background: linear-gradient(
+    100deg,
+    #2a2a2e 0%,
+    #fff 18%,
+    #9ad0ff 30%,
+    #7c5cff 42%,
+    #fff 55%,
+    #3a3a40 70%,
+    #5ac8fa 85%,
+    #fff 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-bottom: 0.08em;
+}
+
+.gloss__sub {
+  margin-top: 18px;
+  font-size: var(--fs-lead);
+  color: var(--text-2);
+}
