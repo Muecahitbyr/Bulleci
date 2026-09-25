@@ -16,9 +16,14 @@
   margin: 0;
 }
 
+.hours {
+  width: calc(100% + 24px);
+  margin-inline: -12px;
+}
+
 .hours th,
 .hours td {
-  padding: 14px 0;
+  padding: 14px 12px;
   border-bottom: 1px solid var(--line);
   text-align: left;
   font-weight: 500;
@@ -50,16 +55,20 @@
   font-weight: 600;
 }
 
-.hours__today {
-  display: inline-block;
-  margin-left: 8px;
-  padding: 2px 8px;
-  border-radius: var(--pill);
-  background: rgb(0 113 227 / 0.1);
+/* Heutiger Tag: farbig hinterlegte Zeile */
+.hours tr.is-today th,
+.hours tr.is-today td {
+  background: rgb(0 113 227 / 0.08);
+  border-bottom-color: transparent;
+}
+
+.hours tr.is-today th {
+  border-radius: 12px 0 0 12px;
   color: var(--blue);
-  font-size: 0.6875rem;
-  font-weight: 600;
-  vertical-align: 2px;
+}
+
+.hours tr.is-today td {
+  border-radius: 0 12px 12px 0;
 }
 
 .contact__note {
@@ -147,7 +156,7 @@
 @media (max-width: 479px) {
   .hours th,
   .hours td {
-    padding: 12px 0;
+    padding: 12px;
   }
 
   .hours__slot {

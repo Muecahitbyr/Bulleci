@@ -78,8 +78,8 @@ function renderTable() {
         ? slots.map(([a, b]) => `<span class="hours__slot">${a}–${b}</span>`).join('')
         : 'Geschlossen';
       const isToday = day === today;
-      return `<tr class="${isToday ? 'is-today' : ''}${slots.length ? '' : ' is-closed'}">
-        <th scope="row">${dayNames[day]}${isToday ? ' <span class="hours__today">Heute</span>' : ''}</th>
+      return `<tr class="${isToday ? 'is-today' : ''}${slots.length ? '' : ' is-closed'}"${isToday ? ' aria-current="date"' : ''}>
+        <th scope="row">${dayNames[day]}</th>
         <td>${value}</td>
       </tr>`;
     })

@@ -55,7 +55,9 @@
 .hero__title .line {
   display: block;
   overflow: hidden;
-  padding: 0.02em 0.06em 0.1em;
+  /* Platz für Unterlängen (g, p, y), ohne den Zeilenabstand zu vergrößern */
+  padding: 0.02em 0.06em 0.18em;
+  margin-bottom: -0.08em;
 }
 
 .hero__title .line > span {
