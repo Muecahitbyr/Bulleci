@@ -108,6 +108,9 @@
   background: rgb(255 255 255 / 0.96);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-bottom: env(safe-area-inset-bottom);
   opacity: 0;
   visibility: hidden;
   transition:

@@ -1,14 +1,41 @@
 import { gsap, ScrollTrigger, motionEnabled } from '../core/motion.js';
 
-/** Vorher/Nachher-Slider – per Maus, Touch und Tastatur (range input) bedienbar. */
+/**
+ * Vorher/Nachher-Slider.
+ * - Maus & Touch: Ziehen irgendwo auf dem Bild (Pointer Events, auch iOS)
+ * - Tastatur: unsichtbarer range-Input (Pfeiltasten)
+ */
 export function initCompare() {
   document.querySelectorAll('[data-compare]').forEach((el) => {
     const range = el.querySelector('[data-compare-range]');
     const state = { pos: 50 };
     const apply = () => {
       el.style.setProperty('--pos', `${state.pos}%`);
-      range.value = state.pos;
+      range.value = Math.round(state.pos);
     };
+
+    const setFromPointer = (event) => {
+      const rect = el.getBoundingClientRect();
+      state.pos = gsap.utils.clamp(0, 100, ((event.clientX - rect.left) / rect.width) * 100);
+      apply();
+    };
+
+    let dragging = false;
+    el.addEventListener('pointerdown', (event) => {
+      if (event.pointerType === 'mouse' && event.button !== 0) return;
+      dragging = true;
+      gsap.killTweensOf(state);
+      el.setPointerCapture(event.pointerId);
+      el.classList.add('is-dragging');
+      setFromPointer(event);
+    });
+    el.addEventListener('pointermove', (event) => dragging && setFromPointer(event));
+    const stop = () => {
+      dragging = false;
+      el.classList.remove('is-dragging');
+    };
+    el.addEventListener('pointerup', stop);
+    el.addEventListener('pointercancel', stop);
 
     range.addEventListener('input', () => {
       gsap.killTweensOf(state);

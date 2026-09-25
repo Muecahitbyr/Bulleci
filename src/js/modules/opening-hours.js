@@ -74,7 +74,9 @@ function renderTable() {
   table.innerHTML = order
     .map((day) => {
       const slots = business.hours[day] ?? [];
-      const value = slots.length ? slots.map(([a, b]) => `${a}–${b}`).join(', ') : 'Geschlossen';
+      const value = slots.length
+        ? slots.map(([a, b]) => `<span class="hours__slot">${a}–${b}</span>`).join('')
+        : 'Geschlossen';
       const isToday = day === today;
       return `<tr class="${isToday ? 'is-today' : ''}${slots.length ? '' : ' is-closed'}">
         <th scope="row">${dayNames[day]}${isToday ? ' <span class="hours__today">Heute</span>' : ''}</th>

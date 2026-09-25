@@ -116,6 +116,7 @@
   font-size: 0.8125rem;
   color: var(--text-2);
   white-space: nowrap;
+  max-width: calc(100% - 32px);
 }
 
 .hero__badge img {
@@ -129,13 +130,50 @@
   font-size: 0.9375rem;
 }
 
+/* Querformat-Handy: weniger Höhe, Bild nicht höher als der Screen */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    padding-top: calc(var(--nav-h) + 32px);
+  }
+
+  .hero__media {
+    height: 100svh;
+    min-height: 0;
+  }
+}
+
 @media (max-width: 699px) {
   .hero__lead {
     font-size: 1.0625rem;
   }
 
+  .hero__cta {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .hero__badge {
+    padding-right: 16px;
+    font-size: 0.75rem;
+    white-space: normal;
+    width: max-content;
+  }
+
   .hero__media {
     height: 70svh;
     clip-path: inset(0% 3% 0% 3% round 24px);
+  }
+}
+
+/* Sehr kleine Handys (iPhone SE 1. Gen., 320 px) */
+@media (max-width: 359px) {
+  .rating-chip {
+    font-size: 0.75rem;
+    gap: 6px;
+    padding-inline: 10px 12px;
+  }
+
+  .hero .eyebrow {
+    font-size: 0.8125rem;
   }
 }

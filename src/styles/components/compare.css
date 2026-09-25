@@ -8,7 +8,9 @@
   background: var(--surface-strong);
   box-shadow: var(--shadow-lg);
   user-select: none;
+  -webkit-user-select: none;
   touch-action: pan-y;
+  cursor: ew-resize;
 }
 
 .compare__img {
@@ -87,7 +89,7 @@
   height: 100%;
   margin: 0;
   opacity: 0;
-  cursor: ew-resize;
+  pointer-events: none;
 }
 
 .compare:has(.compare__range:focus-visible) {
@@ -95,6 +97,21 @@
   outline-offset: 4px;
 }
 
-.compare:has(.compare__range:active) .compare__knob {
+.compare.is-dragging .compare__knob {
   scale: 0.9;
+}
+
+@media (max-width: 599px) {
+  .compare {
+    aspect-ratio: 4 / 3.4;
+    border-radius: var(--radius);
+  }
+
+  .compare__label {
+    top: 12px;
+    font-size: 0.6875rem;
+  }
+
+  .compare__label--left { left: 12px; }
+  .compare__label--right { right: 12px; }
 }

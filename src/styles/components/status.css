@@ -41,6 +41,8 @@
 }
 
 .status-pill--lg {
+  max-width: 100%;
+  white-space: normal;
   font-size: var(--fs-small);
   padding: 7px 14px;
   color: var(--text);

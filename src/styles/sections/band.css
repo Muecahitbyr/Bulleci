@@ -52,3 +52,10 @@
   font-size: var(--fs-lead);
   color: rgb(255 255 255 / 0.85);
 }
+
+@media (max-width: 599px) {
+  .band {
+    height: 78svh;
+    min-height: 460px;
+  }
+}

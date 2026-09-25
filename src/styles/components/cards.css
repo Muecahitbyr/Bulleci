@@ -72,9 +72,15 @@
     translate 0.6s var(--ease-out);
 }
 
-.tile:hover {
-  box-shadow: var(--shadow);
-  translate: 0 -4px;
+@media (hover: hover) {
+  .tile:hover {
+    box-shadow: var(--shadow);
+    translate: 0 -4px;
+  }
+
+  .tile:hover .tile__media img {
+    scale: 1.05;
+  }
 }
 
 .tile__media {
@@ -91,10 +97,6 @@
   height: 116%;
   object-fit: cover;
   transition: scale 1.2s var(--ease-out);
-}
-
-.tile:hover .tile__media img {
-  scale: 1.05;
 }
 
 .tile__body {
@@ -130,7 +132,7 @@
 /* Große Kachel: Bild füllt die Fläche, Text auf Verlauf */
 .tile--xl {
   justify-content: flex-end;
-  min-height: 520px;
+  min-height: clamp(460px, 70vw, 560px);
   color: #fff;
 }
 
@@ -202,4 +204,16 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgb(255 255 255 / 0.2);
+}
+
+/* Handy: Text auf großen Kacheln braucht mehr Kontrast */
+@media (max-width: 699px) {
+  .tile--xl .tile__media::after {
+    background: linear-gradient(180deg, rgb(0 0 0 / 0.15) 0%, rgb(0 0 0 / 0.6) 40%, rgb(0 0 0 / 0.85));
+  }
+
+  .chips li {
+    padding: 6px 12px;
+    font-size: 0.8125rem;
+  }
 }

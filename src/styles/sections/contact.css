@@ -25,6 +25,10 @@
   vertical-align: top;
 }
 
+.hours__slot + .hours__slot::before {
+  content: ', ';
+}
+
 .hours td {
   text-align: right;
   color: var(--text-2);
@@ -132,6 +136,32 @@
   height: 100%;
   min-height: 420px;
   border: 0;
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .contact__side {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 479px) {
+  .hours th,
+  .hours td {
+    padding: 12px 0;
+  }
+
+  .hours__slot {
+    display: block;
+  }
+
+  .hours__slot + .hours__slot::before {
+    content: none;
+  }
+
+  .map,
+  .map iframe {
+    min-height: 340px;
+  }
 }
 
 @media (min-width: 900px) {

@@ -73,6 +73,23 @@ Der Inhalt von `dist/` kann auf jeden statischen Hoster hochgeladen werden
 Bei aktivierter Systemeinstellung „Bewegung reduzieren“ werden alle
 Animationen automatisch deaktiviert und alle Inhalte sofort angezeigt.
 
+## Responsive
+
+Getestet ohne horizontales Überlaufen auf:
+
+| Gerät                         | Auflösung              |
+| ----------------------------- | ---------------------- |
+| iPhone SE / 8 / 15 / Pro Max  | 320, 375, 390, 430 px  |
+| Handy quer                    | 844 × 390              |
+| iPad / iPad Air (hoch & quer) | 768, 834, 1024, 1180 px|
+| Laptop                        | 1280 × 720, 1366 × 768 |
+| Desktop                       | 1440, 1920, 2560 px    |
+
+- Der horizontale Ablauf-Scroll ist nur ab 900 px Breite aktiv, darunter stehen die Schritte untereinander.
+- Hover-Effekte gibt es nur auf Geräten mit Maus, Touch-Geräte bekommen keine „hängenden“ Zustände.
+- Der Vorher/Nachher-Slider lässt sich überall auf dem Bild ziehen (Maus und Touch) oder mit den Pfeiltasten bedienen.
+- Safe Areas (iPhone-Notch im Querformat) werden berücksichtigt.
+
 ## Vor dem Go-live
 
 - [ ] Impressum: Inhabername, E-Mail, ggf. USt-IdNr. und Handwerkskammer ergänzen

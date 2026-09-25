@@ -15,7 +15,7 @@
 
 /* Das Foto scheint durch die Buchstaben (Bild: public/images/glanz.jpg) */
 .gloss__word {
-  font-size: clamp(5.5rem, 24vw, 22rem);
+  font-size: clamp(4.5rem, 24vw, 22rem);
   font-weight: 800;
   line-height: 0.9;
   letter-spacing: -0.05em;

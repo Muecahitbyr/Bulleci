@@ -98,6 +98,16 @@
   gap: 12px;
 }
 
+@media (max-width: 599px) {
+  .reviews__actions {
+    flex-direction: column;
+  }
+
+  .stat {
+    padding: 28px 20px;
+  }
+}
+
 @media (min-width: 700px) {
   .stats {
     grid-template-columns: repeat(3, 1fr);
