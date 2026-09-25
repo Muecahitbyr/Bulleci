@@ -2,49 +2,53 @@ import { gsap, motionEnabled } from '../core/motion.js';
 
 export function initHero() {
   const hero = document.querySelector('[data-hero]');
-  if (!hero) return;
+  if (!hero || !motionEnabled) return;
 
   const content = hero.querySelector('[data-hero-content]');
-  const car = hero.querySelector('[data-hero-car]');
-  const shine = hero.querySelector('[data-car-shine]');
-  const wheels = hero.querySelectorAll('[data-car-wheel]');
-  const hint = hero.querySelector('[data-scroll-hint]');
-
-  if (!motionEnabled) return;
-
-  gsap.set(wheels, { transformOrigin: '50% 50%' });
+  const media = hero.querySelector('[data-hero-media]');
+  const img = hero.querySelector('[data-hero-img]');
+  const badge = hero.querySelector('[data-hero-badge]');
 
   // 1) Einstiegsanimation beim Laden
-  const intro = gsap.timeline({ defaults: { ease: 'expo.out', duration: 1.4 } });
-  intro
+  gsap
+    .timeline({ defaults: { ease: 'expo.out', duration: 1.4 } })
     .from(hero.querySelectorAll('[data-hero-line]'), { yPercent: 110, stagger: 0.12, duration: 1.3 })
     .from(hero.querySelectorAll('[data-hero-intro]'), { y: 24, opacity: 0, stagger: 0.08 }, 0.25)
-    .from(car, { x: '-18vw', opacity: 0, duration: 1.8 }, 0.3)
-    .from(wheels, { rotation: -540, duration: 1.8 }, 0.3)
-    .fromTo(shine, { attr: { x: -320 } }, { attr: { x: 900 }, duration: 1.6, ease: 'power2.inOut' }, 1.1)
-    .from(hint, { opacity: 0, duration: 1 }, 1.4);
+    .from(media, { y: 120, opacity: 0, duration: 1.8 }, 0.35)
+    .from(badge, { y: 30, opacity: 0, duration: 1.2 }, 1);
 
-  // 2) Scroll-Szene: Hero wird gepinnt, Text weicht, Auto fährt nach vorn
+  // 2) Scroll: Bild öffnet sich von der abgerundeten Karte auf volle Breite
   const mm = gsap.matchMedia();
-  mm.add(
-    { desktop: '(min-width: 900px)', mobile: '(max-width: 899px)' },
-    ({ conditions }) => {
-      const tl = gsap.timeline({
-        defaults: { ease: 'none' },
-        scrollTrigger: {
-          trigger: hero,
-          start: 'top top',
-          end: conditions.desktop ? '+=110%' : '+=60%',
-          scrub: 0.6,
-          pin: true,
-        },
-      });
+  mm.add({ desktop: '(min-width: 700px)', mobile: '(max-width: 699px)' }, ({ conditions }) => {
+    const inset = conditions.desktop ? 4 : 3;
+    const radius = conditions.desktop ? 32 : 24;
 
-      tl.to(content, { yPercent: -30, opacity: 0, scale: 0.94 }, 0)
-        .to(hint, { opacity: 0, duration: 0.2 }, 0)
-        .to(car, { scale: conditions.desktop ? 1.6 : 1.25, yPercent: conditions.desktop ? -45 : -20 }, 0)
-        .fromTo(wheels, { rotation: 0 }, { rotation: 360, immediateRender: false }, 0)
-        .fromTo(shine, { attr: { x: -320 } }, { attr: { x: 1000 }, immediateRender: false }, 0.1);
-    },
-  );
+    gsap.fromTo(
+      media,
+      { clipPath: `inset(0% ${inset}% 0% ${inset}% round ${radius}px)` },
+      {
+        clipPath: 'inset(0% 0% 0% 0% round 0px)',
+        ease: 'none',
+        scrollTrigger: { trigger: media, start: 'top 85%', end: 'top top', scrub: true },
+      },
+    );
+
+    gsap.fromTo(
+      img,
+      { scale: 1.2 },
+      {
+        scale: 1,
+        yPercent: 8,
+        ease: 'none',
+        scrollTrigger: { trigger: media, start: 'top bottom', end: 'bottom top', scrub: true },
+      },
+    );
+
+    gsap.to(content, {
+      yPercent: -18,
+      opacity: 0.2,
+      ease: 'none',
+      scrollTrigger: { trigger: hero, start: 'top top', end: '+=70%', scrub: true },
+    });
+  });
 }

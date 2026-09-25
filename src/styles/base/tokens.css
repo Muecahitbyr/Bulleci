@@ -1,32 +1,28 @@
 :root {
-  /* Farben – dunkel (Standard) */
-  --bg: #000;
-  --bg-elev: #0a0a0c;
-  --surface: #121215;
-  --surface-2: #1c1c20;
-  --line: rgb(255 255 255 / 0.09);
-  --line-strong: rgb(255 255 255 / 0.16);
-  --text: #f5f5f7;
-  --text-2: #a1a1a6;
-  --text-3: #6e6e73;
-
-  /* Helle Sektionen */
-  --light-bg: #f5f5f7;
-  --light-surface: #fff;
-  --light-text: #1d1d1f;
-  --light-text-2: #6e6e73;
-  --light-line: rgb(0 0 0 / 0.08);
+  /* Farben – helles Design */
+  --bg: #fff;
+  --bg-alt: #f5f5f7;
+  --surface: #f5f5f7;
+  --surface-strong: #e8e8ed;
+  --line: rgb(0 0 0 / 0.08);
+  --line-strong: rgb(0 0 0 / 0.14);
+  --text: #1d1d1f;
+  --text-2: #6e6e73;
+  --text-3: #86868b;
+  --shadow-sm: 0 2px 8px rgb(0 0 0 / 0.04), 0 1px 2px rgb(0 0 0 / 0.04);
+  --shadow: 0 18px 50px -20px rgb(0 0 0 / 0.18);
+  --shadow-lg: 0 40px 100px -30px rgb(0 0 0 / 0.3);
 
   /* Akzente */
-  --blue: #2997ff;
-  --blue-strong: #0071e3;
-  --cyan: #5ac8fa;
-  --violet: #7c5cff;
-  --pink: #ff6ec7;
-  --green: #30d158;
-  --orange: #ff9f0a;
-  --red: #ff453a;
-  --gradient: linear-gradient(100deg, var(--cyan) 0%, var(--blue) 30%, var(--violet) 62%, var(--pink) 100%);
+  --blue: #0071e3;
+  --blue-hover: #0077ed;
+  --link: #0066cc;
+  --violet: #6e4ff6;
+  --green: #28a745;
+  --orange: #f59e0b;
+  --red: #e5484d;
+  --star: #f5a623;
+  --gradient: linear-gradient(100deg, #0071e3 0%, #3a6df0 35%, #6e4ff6 70%, #b44fd6 100%);
 
   /* Typografie */
   --font: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Inter Variable', 'Helvetica Neue', Arial, sans-serif;
@@ -41,8 +37,8 @@
   --container: 1200px;
   --container-narrow: 880px;
   --gutter: clamp(20px, 4vw, 40px);
-  --section-y: clamp(96px, 14vw, 180px);
-  --nav-h: 52px;
+  --section-y: clamp(96px, 14vw, 170px);
+  --nav-h: 56px;
 
   /* Form */
   --radius-sm: 12px;

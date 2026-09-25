@@ -8,11 +8,13 @@
     <meta property="og:title" content="Bulleci – Fahrzeugpflege &amp; Smartrepair in Kaufbeuren" />
     <meta property="og:description" content="Aufbereitung und smarte Reparaturen für Lack, Dellen und Innenraum. Wolftrigelstraße 1 A, 87600 Kaufbeuren." />
     <meta property="og:locale" content="de_DE" />
+    <meta property="og:image" content="/images/hero.jpg" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "AutoBodyShop",
         "name": "M. Bulleci Fahrzeugpflege & Smartrepair",
+        "image": "/images/logo-512.png",
         "telephone": "+49 8341 9546110",
         "address": {
           "@type": "PostalAddress",
@@ -37,42 +39,36 @@
     <main id="inhalt">
       <!-- ============ HERO ============ -->
       <section class="hero" id="top" data-hero>
-        <div class="hero__bg" aria-hidden="true">
-          <div class="orb orb--blue" data-speed="-0.35"></div>
-          <div class="orb orb--violet" data-speed="-0.15"></div>
-          <div class="orb orb--cyan" data-speed="-0.5"></div>
-          <div class="hero__grid"></div>
-        </div>
-
-        <div class="hero__stage">
-          <div class="hero__content container" data-hero-content>
-            <a class="rating-chip" href="#bewertungen" data-hero-intro>
-              <span class="rating-chip__stars" aria-hidden="true">★★★★★</span>
-              <span><strong>4,9</strong> · 66 Google-Rezensionen</span>
-            </a>
-            <p class="eyebrow" data-hero-intro>Fahrzeugpflege &amp; Smartrepair · Kaufbeuren</p>
-            <h1 class="hero__title">
-              <span class="line"><span data-hero-line>Wie neu.</span></span>
-              <span class="line"><span class="text-gradient" data-hero-line>Nur glänzender.</span></span>
-            </h1>
-            <p class="hero__lead" data-hero-intro>
-              Professionelle Aufbereitung und smarte Reparaturen für Lack, Dellen und Innenraum –
-              mit Handarbeit und einem Auge für jedes Detail.
-            </p>
-            <div class="hero__cta" data-hero-intro>
-              <a class="btn btn--primary" href="tel:+4983419546110">Termin vereinbaren</a>
-              <a class="btn btn--ghost" href="#leistungen">Leistungen ansehen <span aria-hidden="true">›</span></a>
-            </div>
-          </div>
-
-          <div class="hero__car" data-hero-car>
-            <!-- @include car.html -->
+        <div class="hero__content container" data-hero-content>
+          <a class="rating-chip" href="#bewertungen" data-hero-intro>
+            <span class="rating-chip__stars" aria-hidden="true">★★★★★</span>
+            <span><strong>4,9</strong> · 66 Google-Rezensionen</span>
+          </a>
+          <p class="eyebrow" data-hero-intro>Fahrzeugpflege &amp; Smartrepair · Kaufbeuren</p>
+          <h1 class="hero__title">
+            <span class="line"><span data-hero-line>Wie neu.</span></span>
+            <span class="line"><span class="text-gradient" data-hero-line>Nur glänzender.</span></span>
+          </h1>
+          <p class="hero__lead" data-hero-intro>
+            Professionelle Aufbereitung und smarte Reparaturen für Lack, Dellen und Innenraum –
+            mit Handarbeit und einem Auge für jedes Detail.
+          </p>
+          <div class="hero__cta" data-hero-intro>
+            <a class="btn btn--primary" href="tel:+4983419546110">Termin vereinbaren</a>
+            <a class="btn btn--ghost" href="#leistungen">Leistungen ansehen <span aria-hidden="true">›</span></a>
           </div>
         </div>
 
-        <div class="scroll-hint" aria-hidden="true" data-scroll-hint>
-          <span>Scrollen</span>
-          <span class="scroll-hint__line"></span>
+        <!-- Bild ersetzen: public/images/hero.jpg (Querformat, ca. 2000 × 1125 px) -->
+        <div class="hero__media" data-hero-media>
+          <img src="/images/hero.jpg" width="2000" height="1125" alt="Schaumwäsche an einem Sportwagen" fetchpriority="high" data-hero-img />
+          <div class="hero__badge" data-hero-badge>
+            <img src="/images/logo-96.png" width="44" height="44" alt="" />
+            <span>
+              <strong>M. Bulleci</strong>
+              Wolftrigelstraße 1 A · Kaufbeuren
+            </span>
+          </div>
         </div>
       </section>
 
@@ -87,9 +83,9 @@
         </div>
       </section>
 
-      <!-- ============ LEISTUNGEN (Bento) ============ -->
-      <!-- Hinweis: Leistungsumfang bitte mit dem Betrieb abstimmen und bei Bedarf anpassen. -->
-      <section class="services section" id="leistungen">
+      <!-- ============ LEISTUNGEN (Bento mit Bildern) ============ -->
+      <!-- Hinweis: Leistungsumfang bitte mit dem Betrieb abstimmen. Bilder liegen in public/images/. -->
+      <section class="services section section--alt" id="leistungen">
         <div class="container">
           <header class="section-head" data-reveal>
             <p class="eyebrow">Leistungen</p>
@@ -97,17 +93,12 @@
           </header>
 
           <div class="bento">
-            <article class="card bento__item bento__item--xl card--pflege" data-reveal data-spotlight>
-              <div class="card__visual" aria-hidden="true">
-                <span class="bubble" style="--x: 18%; --y: 30%; --s: 90px"></span>
-                <span class="bubble" style="--x: 70%; --y: 18%; --s: 140px"></span>
-                <span class="bubble" style="--x: 55%; --y: 62%; --s: 60px"></span>
-                <span class="bubble" style="--x: 84%; --y: 70%; --s: 36px"></span>
-              </div>
-              <div class="card__body">
+            <article class="tile tile--xl" data-reveal>
+              <div class="tile__media"><img src="/images/fahrzeugpflege.jpg" width="1400" height="1867" alt="Handwäsche mit Waschhandschuh und Schaum" loading="lazy" data-parallax-img /></div>
+              <div class="tile__body">
                 <p class="eyebrow">Fahrzeugpflege</p>
-                <h3 class="card__title card__title--lg">Innen wie außen.<br />Zurück in Bestform.</h3>
-                <p class="card__text">
+                <h3 class="tile__title tile__title--lg">Innen wie außen.<br />Zurück in Bestform.</h3>
+                <p class="tile__text">
                   Von der schonenden Handwäsche bis zur kompletten Innenraumaufbereitung – wir behandeln
                   jede Oberfläche mit dem passenden Verfahren und den richtigen Produkten.
                 </p>
@@ -122,49 +113,52 @@
               </div>
             </article>
 
-            <article class="card bento__item" data-reveal data-spotlight>
-              <svg class="card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" /><path d="M19 15.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z" /></svg>
-              <h3 class="card__title">Lackpolitur</h3>
-              <p class="card__text">Swirls, Hologramme und matte Stellen verschwinden. Zurück bleibt Tiefenglanz.</p>
-            </article>
-
-            <article class="card bento__item" data-reveal data-spotlight>
-              <svg class="card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6z" /><path d="M9 12l2 2 4-4" /></svg>
-              <h3 class="card__title">Versiegelung</h3>
-              <p class="card__text">Langanhaltender Schutz gegen Witterung, Schmutz und UV – mit spürbarem Abperleffekt.</p>
-            </article>
-
-            <article class="card bento__item" data-reveal data-spotlight>
-              <svg class="card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 21h12" /><path d="M8 21v-4M16 21v-4" /><path d="M7 17h10l-1-6H8z" /><path d="M8.6 11l-.5-5a2 2 0 0 1 2-2h3.8a2 2 0 0 1 2 2l-.5 5" /></svg>
-              <h3 class="card__title">Innenraum</h3>
-              <p class="card__text">Tiefenreinigung von Sitzen, Teppichen und Verkleidungen – hygienisch und frisch.</p>
-            </article>
-
-            <article class="card bento__item" data-reveal data-spotlight>
-              <svg class="card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z" /><path d="M3 13l9 5 9-5" /></svg>
-              <h3 class="card__title">Leder &amp; Kunststoff</h3>
-              <p class="card__text">Reinigen, pflegen, auffrischen: Oberflächen, die sich wieder wie neu anfühlen.</p>
-            </article>
-
-            <article class="card bento__item" data-reveal data-spotlight>
-              <svg class="card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12c0-4 3-7 8-7v14c-5 0-8-3-8-7z" /><path d="M14 8h7M14 12h7M14 16h7" /></svg>
-              <h3 class="card__title">Scheinwerfer</h3>
-              <p class="card__text">Vergilbte und matte Scheinwerfer werden wieder klar – für Optik und Sicherheit.</p>
-            </article>
-
-            <article class="card bento__item bento__item--xl bento__item--right card--repair" data-reveal data-spotlight>
-              <div class="card__visual" aria-hidden="true">
-                <svg class="repair-rings" viewBox="0 0 200 200">
-                  <circle cx="100" cy="100" r="30" />
-                  <circle cx="100" cy="100" r="55" />
-                  <circle cx="100" cy="100" r="80" />
-                  <circle cx="100" cy="100" r="98" />
-                </svg>
+            <article class="tile" data-reveal>
+              <div class="tile__media"><img src="/images/politur.jpg" width="900" height="700" alt="Poliermaschine auf weißem Lack" loading="lazy" data-parallax-img /></div>
+              <div class="tile__body">
+                <h3 class="tile__title">Lackpolitur</h3>
+                <p class="tile__text">Swirls, Hologramme und matte Stellen verschwinden. Zurück bleibt Tiefenglanz.</p>
               </div>
-              <div class="card__body">
+            </article>
+
+            <article class="tile" data-reveal>
+              <div class="tile__media"><img src="/images/versiegelung.jpg" width="900" height="700" alt="Mikrofasertuch auf glänzendem rotem Lack" loading="lazy" data-parallax-img /></div>
+              <div class="tile__body">
+                <h3 class="tile__title">Versiegelung</h3>
+                <p class="tile__text">Langanhaltender Schutz gegen Witterung, Schmutz und UV – mit spürbarem Abperleffekt.</p>
+              </div>
+            </article>
+
+            <article class="tile" data-reveal>
+              <div class="tile__media"><img src="/images/innenraum.jpg" width="900" height="700" alt="Reinigung des Armaturenbretts mit einem Detailpinsel" loading="lazy" data-parallax-img /></div>
+              <div class="tile__body">
+                <h3 class="tile__title">Innenraum</h3>
+                <p class="tile__text">Tiefenreinigung von Sitzen, Teppichen und Verkleidungen – hygienisch und frisch.</p>
+              </div>
+            </article>
+
+            <article class="tile" data-reveal>
+              <div class="tile__media"><img src="/images/leder.jpg" width="900" height="700" alt="Gepflegte Ledersitze und Mittelkonsole" loading="lazy" data-parallax-img /></div>
+              <div class="tile__body">
+                <h3 class="tile__title">Leder &amp; Kunststoff</h3>
+                <p class="tile__text">Reinigen, pflegen, auffrischen: Oberflächen, die sich wieder wie neu anfühlen.</p>
+              </div>
+            </article>
+
+            <article class="tile" data-reveal>
+              <div class="tile__media"><img src="/images/scheinwerfer.jpg" width="900" height="700" alt="Aufbereitung eines Scheinwerfers" loading="lazy" data-parallax-img /></div>
+              <div class="tile__body">
+                <h3 class="tile__title">Scheinwerfer</h3>
+                <p class="tile__text">Vergilbte und matte Scheinwerfer werden wieder klar – für Optik und Sicherheit.</p>
+              </div>
+            </article>
+
+            <article class="tile tile--xl tile--right" data-reveal>
+              <div class="tile__media"><img src="/images/smart-repair.jpg" width="1400" height="933" alt="Arbeit an der Karosserie eines Sportwagens" loading="lazy" data-parallax-img /></div>
+              <div class="tile__body">
                 <p class="eyebrow">Smart Repair</p>
-                <h3 class="card__title card__title--lg">Kleine Schäden.<br />Große Wirkung.</h3>
-                <p class="card__text">
+                <h3 class="tile__title tile__title--lg">Kleine Schäden.<br />Große Wirkung.</h3>
+                <p class="tile__text">
                   Dellen, Kratzer und Steinschläge werden gezielt und lokal ausgebessert – ohne das
                   ganze Bauteil neu zu lackieren. Das spart Zeit und Kosten.
                 </p>
@@ -172,40 +166,64 @@
               </div>
             </article>
 
-            <article class="card bento__item" data-reveal data-spotlight>
-              <svg class="card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 15c4-5 14-5 18 0" /><path d="M12 18V9" /><path d="M9 12l3-3 3 3" /></svg>
-              <h3 class="card__title">Dellen</h3>
-              <p class="card__text">Parkrempler oder Hagel: Dellen werden – wo möglich – ohne Lackieren herausgearbeitet.</p>
+            <article class="tile" data-reveal>
+              <div class="tile__media"><img src="/images/dellen.jpg" width="900" height="700" alt="Karosseriearbeit an einem Fahrzeug" loading="lazy" data-parallax-img /></div>
+              <div class="tile__body">
+                <h3 class="tile__title">Dellen</h3>
+                <p class="tile__text">Parkrempler oder Hagel: Dellen werden – wo möglich – ohne Lackieren herausgearbeitet.</p>
+              </div>
             </article>
 
-            <article class="card bento__item" data-reveal data-spotlight>
-              <svg class="card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 4.5l5 5L9 20H4v-5z" /><path d="M12.5 6.5l5 5" /></svg>
-              <h3 class="card__title">Kratzer &amp; Lack</h3>
-              <p class="card__text">Schrammen und Lackschäden werden punktgenau ausgebessert und farblich angeglichen.</p>
+            <article class="tile" data-reveal>
+              <div class="tile__media"><img src="/images/kratzer.jpg" width="900" height="700" alt="Lackausbesserung mit Poliermaschine" loading="lazy" data-parallax-img /></div>
+              <div class="tile__body">
+                <h3 class="tile__title">Kratzer &amp; Lack</h3>
+                <p class="tile__text">Schrammen und Lackschäden werden punktgenau ausgebessert und farblich angeglichen.</p>
+              </div>
             </article>
 
-            <article class="card bento__item" data-reveal data-spotlight>
-              <svg class="card__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2" /><path d="M12 3v6M12 15v6M3 12h6M15 12h6M6 6l4 4M14 14l4 4M18 6l-4 4" /></svg>
-              <h3 class="card__title">Steinschläge</h3>
-              <p class="card__text">Kleine Einschläge im Lack werden versiegelt, bevor Rost eine Chance hat.</p>
+            <article class="tile" data-reveal>
+              <div class="tile__media"><img src="/images/steinschlag.jpg" width="900" height="700" alt="Mikrofasertuch auf schwarzer Motorhaube" loading="lazy" data-parallax-img /></div>
+              <div class="tile__body">
+                <h3 class="tile__title">Steinschläge</h3>
+                <p class="tile__text">Kleine Einschläge im Lack werden versiegelt, bevor Rost eine Chance hat.</p>
+              </div>
             </article>
 
-            <article class="card bento__item" data-reveal data-spotlight>
-              <svg class="card__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="2.5" /><path d="M12 3v6.5M12 14.5V21M3.5 9.5l6.2 1.7M14.3 12.8l6.2 1.7" /></svg>
-              <h3 class="card__title">Felgen</h3>
-              <p class="card__text">Bordsteinschäden an Alufelgen werden repariert und optisch aufbereitet.</p>
+            <article class="tile" data-reveal>
+              <div class="tile__media"><img src="/images/felgen.jpg" width="900" height="700" alt="Felgenreinigung mit Bürste" loading="lazy" data-parallax-img /></div>
+              <div class="tile__body">
+                <h3 class="tile__title">Felgen</h3>
+                <p class="tile__text">Bordsteinschäden an Alufelgen werden repariert und optisch aufbereitet.</p>
+              </div>
             </article>
 
-            <article class="card bento__item card--cta" data-reveal data-spotlight>
-              <h3 class="card__title">Ihr Anliegen ist nicht dabei?</h3>
-              <p class="card__text">Rufen Sie einfach an – wir beraten Sie gerne persönlich.</p>
-              <a class="btn btn--primary btn--sm" href="tel:+4983419546110">08341 9546110</a>
+            <article class="tile tile--cta" data-reveal>
+              <div class="tile__body">
+                <img class="tile__logo" src="/images/logo-192.png" width="88" height="88" alt="" loading="lazy" />
+                <h3 class="tile__title">Ihr Anliegen ist nicht dabei?</h3>
+                <p class="tile__text">Rufen Sie einfach an – wir beraten Sie gerne persönlich.</p>
+                <a class="btn btn--primary btn--sm" href="tel:+4983419546110">08341 9546110</a>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- ============ GLANZ (Pinned Zoom) ============ -->
+      <!-- ============ BILD-BAND (Parallax) ============ -->
+      <!-- Bild ersetzen: public/images/werkstatt.jpg (Querformat, ca. 2000 × 1000 px) -->
+      <section class="band" aria-label="Handarbeit">
+        <div class="band__media">
+          <img src="/images/werkstatt.jpg" width="2000" height="1000" alt="Handwäsche eines schwarzen Sportwagens" loading="lazy" data-band-img />
+        </div>
+        <div class="band__content container">
+          <p class="eyebrow" data-reveal>Handarbeit</p>
+          <h2 class="band__title" data-reveal>Jedes Detail.<br />Von Hand.</h2>
+          <p class="band__text" data-reveal>Keine Waschstraße, keine Kompromisse: Wir nehmen uns Zeit für Ihr Fahrzeug.</p>
+        </div>
+      </section>
+
+      <!-- ============ GLANZ (Pinned Zoom, Bild im Text) ============ -->
       <section class="gloss" data-gloss aria-label="Glanz">
         <div class="gloss__stage">
           <h2 class="gloss__word" data-gloss-word>Glanz.</h2>
@@ -214,7 +232,7 @@
       </section>
 
       <!-- ============ SMART REPAIR (Vorher/Nachher) ============ -->
-      <section class="repair section" id="smartrepair">
+      <section class="repair section section--alt" id="smartrepair">
         <div class="container repair__grid">
           <div class="repair__copy">
             <p class="eyebrow" data-reveal>Smart Repair</p>
@@ -232,77 +250,18 @@
             </ul>
           </div>
 
+          <!-- Bilder ersetzen: public/images/vorher.jpg + nachher.jpg (gleicher Bildausschnitt, 10:7) -->
           <div class="compare" data-compare data-reveal style="--pos: 50%">
-            <div class="compare__layer compare__layer--after">
-              <svg viewBox="0 0 800 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                <defs>
-                  <linearGradient id="panelA" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0" stop-color="#1f4bd8" />
-                    <stop offset=".45" stop-color="#0d2a8a" />
-                    <stop offset=".55" stop-color="#081d63" />
-                    <stop offset="1" stop-color="#030b2a" />
-                  </linearGradient>
-                  <linearGradient id="specA" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stop-color="#fff" stop-opacity="0" />
-                    <stop offset=".5" stop-color="#fff" stop-opacity=".5" />
-                    <stop offset="1" stop-color="#fff" stop-opacity="0" />
-                  </linearGradient>
-                </defs>
-                <rect width="800" height="560" fill="url(#panelA)" />
-                <path d="M0 250C250 228 550 228 800 250" stroke="#8fb0ff" stroke-opacity=".5" stroke-width="3" fill="none" />
-                <path d="M0 256C250 234 550 234 800 256" stroke="#000" stroke-opacity=".35" stroke-width="4" fill="none" />
-                <rect x="520" y="300" width="150" height="34" rx="17" fill="#061652" stroke="#6f93ff" stroke-opacity=".35" />
-                <path d="M-80 560L260 0h90L10 560z" fill="url(#specA)" />
-                <path d="M120 560L430 0h30L150 560z" fill="url(#specA)" opacity=".6" />
-              </svg>
-              <span class="compare__label compare__label--right">Nachher</span>
-            </div>
-
-            <div class="compare__layer compare__layer--before" aria-hidden="true">
-              <svg viewBox="0 0 800 560" preserveAspectRatio="xMidYMid slice">
-                <defs>
-                  <linearGradient id="panelB" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0" stop-color="#2b4591" />
-                    <stop offset=".5" stop-color="#15276a" />
-                    <stop offset="1" stop-color="#0a1438" />
-                  </linearGradient>
-                  <radialGradient id="dentB" cx=".45" cy=".4" r=".6">
-                    <stop offset="0" stop-color="#000" stop-opacity=".55" />
-                    <stop offset=".6" stop-color="#000" stop-opacity=".15" />
-                    <stop offset=".85" stop-color="#9fb6ff" stop-opacity=".25" />
-                    <stop offset="1" stop-color="#9fb6ff" stop-opacity="0" />
-                  </radialGradient>
-                </defs>
-                <rect width="800" height="560" fill="url(#panelB)" />
-                <path d="M0 250C250 228 550 228 800 250" stroke="#8fb0ff" stroke-opacity=".3" stroke-width="3" fill="none" />
-                <path d="M0 256C250 234 550 234 800 256" stroke="#000" stroke-opacity=".35" stroke-width="4" fill="none" />
-                <rect x="520" y="300" width="150" height="34" rx="17" fill="#0d1a4a" stroke="#6f93ff" stroke-opacity=".2" />
-                <rect width="800" height="560" fill="#b9c6e8" opacity=".12" />
-                <g fill="none" stroke="#c9d4f5" stroke-opacity=".12" stroke-width="1">
-                  <circle cx="300" cy="140" r="60" /><circle cx="300" cy="140" r="90" /><circle cx="300" cy="140" r="120" />
-                  <circle cx="620" cy="440" r="50" /><circle cx="620" cy="440" r="80" /><circle cx="160" cy="420" r="70" />
-                </g>
-                <g stroke="#e6ecff" stroke-linecap="round" fill="none">
-                  <path d="M90 120L360 190" stroke-opacity=".7" stroke-width="2.2" />
-                  <path d="M110 138L330 196" stroke-opacity=".4" stroke-width="1.2" />
-                  <path d="M430 380C500 360 560 350 700 356" stroke-opacity=".55" stroke-width="1.8" />
-                  <path d="M200 330L260 300" stroke-opacity=".5" stroke-width="1.4" />
-                </g>
-                <ellipse cx="250" cy="420" rx="120" ry="80" fill="url(#dentB)" />
-                <g fill="#dfe6ff" fill-opacity=".85">
-                  <circle cx="610" cy="120" r="3.2" /><circle cx="640" cy="150" r="2.2" /><circle cx="590" cy="170" r="2.6" /><circle cx="660" cy="100" r="1.8" />
-                </g>
-              </svg>
-              <span class="compare__label compare__label--left">Vorher</span>
-            </div>
-
+            <img class="compare__img" src="/images/nachher.jpg" width="1400" height="980" alt="Nachher: polierter, glänzender Lack" loading="lazy" />
+            <img class="compare__img compare__img--before" src="/images/vorher.jpg" width="1400" height="980" alt="Vorher: matter, verkratzter Lack" loading="lazy" />
+            <span class="compare__label compare__label--left" aria-hidden="true">Vorher</span>
+            <span class="compare__label compare__label--right" aria-hidden="true">Nachher</span>
             <div class="compare__handle" aria-hidden="true">
               <span class="compare__knob">
                 <svg viewBox="0 0 24 24"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6" /></svg>
               </span>
             </div>
             <input class="compare__range" type="range" min="0" max="100" value="50" aria-label="Vorher-Nachher-Vergleich verschieben" data-compare-range />
-            <p class="compare__note">Illustration</p>
           </div>
         </div>
       </section>
@@ -345,7 +304,7 @@
       </section>
 
       <!-- ============ BEWERTUNGEN ============ -->
-      <section class="reviews section theme-light" id="bewertungen">
+      <section class="reviews section section--alt" id="bewertungen">
         <div class="container">
           <div class="reviews__hero" data-reveal>
             <p class="eyebrow">Bewertungen</p>

@@ -38,7 +38,7 @@
   z-index: 200;
   padding: 10px 16px;
   border-radius: var(--pill);
-  background: var(--blue-strong);
+  background: var(--blue);
   color: #fff;
   transform: translateY(-150%);
   transition: transform 0.2s;
@@ -54,14 +54,8 @@
   transform: translateY(40px);
 }
 
-/* Helle Sektionen (Apple-typischer Kontrastwechsel) */
-.theme-light {
-  --text: var(--light-text);
-  --text-2: var(--light-text-2);
-  --text-3: #86868b;
-  --line: var(--light-line);
-  --surface: var(--light-surface);
-  background: var(--light-bg);
-  color: var(--text);
-  color-scheme: light;
+/* Abwechselnde Sektionen (Apple-typisch: Weiß / Hellgrau) */
+.section--alt {
+  --surface: #fff;
+  background: var(--bg-alt);
 }

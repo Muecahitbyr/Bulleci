@@ -1,6 +1,6 @@
 # M. Bulleci Fahrzeugpflege & Smartrepair – Website
 
-Moderne One-Page-Website im Apple-Stil mit Parallax-Ebenen, gepinnten Scroll-Szenen
+Moderne One-Page-Website im hellen Apple-Stil mit Parallax-Bildern, gepinnten Scroll-Szenen
 und flüssigem Smooth-Scrolling.
 
 ## Tech-Stack
@@ -33,8 +33,9 @@ Der Inhalt von `dist/` kann auf jeden statischen Hoster hochgeladen werden
 ├── datenschutz.html        Datenschutz (Vorlage – rechtlich prüfen lassen!)
 ├── 404.html                Fehlerseite
 ├── partials/               Wiederverwendbare HTML-Teile (<!-- @include … -->)
-│   ├── head.html  header.html  footer.html  logo.html  car.html
+│   ├── head.html  header.html  footer.html
 ├── public/                 Statische Dateien (Favicon, robots.txt, Manifest)
+│   └── images/             ⭐ Logo + alle Fotos (siehe images/README.md)
 ├── src/
 │   ├── main.js             Einstieg Startseite
 │   ├── legal.js            Einstieg Unterseiten
@@ -50,6 +51,8 @@ Der Inhalt von `dist/` kann auf jeden statischen Hoster hochgeladen werden
 - **Öffnungszeiten:** nur in `src/config/business.js` ändern. Tabelle und der
   Live-Status („Geöffnet · bis 18:00 Uhr“, „Mittagspause“ …) aktualisieren sich
   automatisch – immer in deutscher Zeit, egal wo der Besucher ist.
+- **Bilder:** in `public/images/` mit gleichem Dateinamen ersetzen – fertig.
+  Übersicht aller Bilder und Formate: `public/images/README.md`.
 - **Header / Footer:** in `partials/` – gilt sofort für alle Seiten.
 - **Leistungen:** direkt in `index.html` im Abschnitt `#leistungen`.
 - **Farben, Schriftgrößen, Abstände:** zentral in `src/styles/base/tokens.css`.
@@ -58,8 +61,8 @@ Der Inhalt von `dist/` kann auf jeden statischen Hoster hochgeladen werden
 
 | Effekt                              | Modul                         |
 | ----------------------------------- | ----------------------------- |
-| Hero: Intro + gepinnte Auto-Szene   | `js/modules/hero.js`          |
-| Parallax-Ebenen (`data-speed`)      | `js/modules/parallax.js`      |
+| Hero: Intro + Bild öffnet sich auf volle Breite | `js/modules/hero.js` |
+| Bild-Parallax (`data-parallax-img`, `data-band-img`) | `js/modules/parallax.js` |
 | Text leuchtet Wort für Wort auf     | `js/modules/text-highlight.js`|
 | „Glanz.“-Zoom (gepinnt)             | `js/modules/gloss.js`         |
 | Horizontaler Ablauf-Scroll          | `js/modules/process.js`       |
@@ -75,5 +78,5 @@ Animationen automatisch deaktiviert und alle Inhalte sofort angezeigt.
 - [ ] Impressum: Inhabername, E-Mail, ggf. USt-IdNr. und Handwerkskammer ergänzen
 - [ ] Datenschutzerklärung: Hoster eintragen und rechtlich prüfen lassen
 - [ ] Leistungsumfang mit dem Betrieb abstimmen
-- [ ] Echte Fotos (Werkstatt, Vorher/Nachher) einsetzen – aktuell SVG-Illustrationen
+- [ ] Eigene Fotos einsetzen (aktuell Unsplash-Platzhalter), v. a. echtes Vorher/Nachher
 - [ ] Domain in `public/robots.txt` eintragen, ggf. `sitemap.xml` ergänzen

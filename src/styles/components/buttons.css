@@ -30,17 +30,17 @@
 }
 
 .btn--primary {
-  --btn-bg: var(--blue-strong);
+  --btn-bg: var(--blue);
   --btn-fg: #fff;
 }
 
 .btn--primary:hover {
-  --btn-bg: #0077ed;
-  box-shadow: 0 10px 30px -10px rgb(0 113 227 / 0.7);
+  --btn-bg: var(--blue-hover);
+  box-shadow: 0 10px 30px -10px rgb(0 113 227 / 0.6);
 }
 
 .btn--ghost {
-  --btn-fg: var(--blue);
+  --btn-fg: var(--link);
   padding-inline: 14px;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .btn--dark {
-  --btn-bg: var(--light-text);
+  --btn-bg: var(--text);
   --btn-fg: #fff;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .btn--ghost-dark {
-  --btn-fg: var(--blue-strong);
+  --btn-fg: var(--link);
   padding-inline: 14px;
 }
 
@@ -69,9 +69,9 @@
 }
 
 .btn--sm {
-  min-height: 32px;
-  padding: 0 14px;
-  font-size: 0.8125rem;
+  min-height: 34px;
+  padding: 0 16px;
+  font-size: 0.875rem;
 }
 
 .btn--lg {

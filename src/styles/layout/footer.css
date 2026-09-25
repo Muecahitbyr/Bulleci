@@ -1,5 +1,5 @@
 .footer {
-  background: var(--bg-elev);
+  background: var(--bg-alt);
   border-top: 1px solid var(--line);
   padding-block: 64px 32px;
   font-size: var(--fs-small);
@@ -14,8 +14,9 @@
   border-bottom: 1px solid var(--line);
 }
 
-.footer__brand .nav__brand {
-  color: var(--text);
+.footer__logo {
+  width: 96px;
+  height: 96px;
 }
 
 .footer__claim {

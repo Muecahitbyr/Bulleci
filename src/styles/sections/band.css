@@ -1,0 +1,54 @@
+/* Vollflächiges Bild mit Parallax */
+.band {
+  position: relative;
+  height: min(92svh, 900px);
+  min-height: 520px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  isolation: isolate;
+}
+
+.band__media {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.band__media img {
+  position: absolute;
+  inset: -12% 0;
+  width: 100%;
+  height: 124%;
+  object-fit: cover;
+}
+
+.band__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(0 0 0 / 0) 30%, rgb(0 0 0 / 0.65));
+}
+
+.band__content {
+  padding-bottom: clamp(48px, 9vh, 96px);
+}
+
+.band .eyebrow {
+  color: rgb(255 255 255 / 0.8);
+}
+
+.band__title {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  margin-bottom: 16px;
+}
+
+.band__text {
+  max-width: 520px;
+  font-size: var(--fs-lead);
+  color: rgb(255 255 255 / 0.85);
+}

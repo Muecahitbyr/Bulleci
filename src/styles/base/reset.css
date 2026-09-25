@@ -11,7 +11,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  color-scheme: dark;
+  color-scheme: light;
   scroll-padding-top: calc(var(--nav-h) + 12px);
 }
 
@@ -71,7 +71,7 @@ table {
 }
 
 ::selection {
-  background: rgb(41 151 255 / 0.4);
+  background: rgb(0 113 227 / 0.2);
 }
 
 body.no-scroll {

@@ -12,7 +12,7 @@
 
 .nav.is-scrolled,
 .nav.is-open {
-  background: rgb(22 22 23 / 0.72);
+  background: rgb(255 255 255 / 0.78);
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   border-bottom-color: var(--line);
@@ -35,13 +35,18 @@
   align-items: center;
   gap: 10px;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   letter-spacing: -0.02em;
 }
 
-.logo-mark {
-  width: 28px;
-  height: 28px;
+.nav__logo {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.nav__brand:hover .nav__logo {
+  transform: rotate(-12deg) scale(1.05);
 }
 
 .nav__links {
@@ -100,7 +105,7 @@
 .mobile-menu {
   position: fixed;
   inset: var(--nav-h) 0 0;
-  background: rgb(0 0 0 / 0.92);
+  background: rgb(255 255 255 / 0.96);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   opacity: 0;
@@ -147,7 +152,7 @@
 .mobile-menu__links .mobile-menu__call {
   margin-top: 24px;
   font-size: 1.125rem;
-  color: var(--blue);
+  color: var(--link);
 }
 
 @media (max-width: 480px) {

@@ -5,25 +5,22 @@
   aspect-ratio: 10 / 7;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background: #030b2a;
-  box-shadow:
-    0 40px 120px -40px rgb(41 151 255 / 0.45),
-    0 0 0 1px var(--line);
+  background: var(--surface-strong);
+  box-shadow: var(--shadow-lg);
   user-select: none;
   touch-action: pan-y;
 }
 
-.compare__layer {
+.compare__img {
   position: absolute;
   inset: 0;
-}
-
-.compare__layer svg {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  pointer-events: none;
 }
 
-.compare__layer--before {
+.compare__img--before {
   clip-path: inset(0 calc(100% - var(--pos)) 0 0);
 }
 
@@ -32,13 +29,15 @@
   top: 18px;
   padding: 6px 12px;
   border-radius: var(--pill);
-  background: rgb(0 0 0 / 0.45);
+  background: rgb(255 255 255 / 0.85);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  color: var(--text);
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  pointer-events: none;
 }
 
 .compare__label--left { left: 18px; }
@@ -51,8 +50,8 @@
   left: var(--pos);
   width: 2px;
   margin-left: -1px;
-  background: rgb(255 255 255 / 0.9);
-  box-shadow: 0 0 20px rgb(255 255 255 / 0.5);
+  background: #fff;
+  box-shadow: 0 0 16px rgb(0 0 0 / 0.3);
   pointer-events: none;
 }
 
@@ -66,15 +65,15 @@
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: rgb(255 255 255 / 0.95);
-  box-shadow: 0 8px 30px rgb(0 0 0 / 0.35);
+  background: #fff;
+  box-shadow: 0 8px 30px rgb(0 0 0 / 0.3);
   transition: scale 0.3s var(--ease-out);
 }
 
 .compare__knob svg {
   width: 22px;
   fill: none;
-  stroke: #1d1d1f;
+  stroke: var(--text);
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -91,7 +90,6 @@
   cursor: ew-resize;
 }
 
-.compare__range:focus-visible + .compare__note,
 .compare:has(.compare__range:focus-visible) {
   outline: 2px solid var(--blue);
   outline-offset: 4px;
@@ -99,13 +97,4 @@
 
 .compare:has(.compare__range:active) .compare__knob {
   scale: 0.9;
-}
-
-.compare__note {
-  position: absolute;
-  bottom: 14px;
-  right: 18px;
-  font-size: 0.6875rem;
-  color: rgb(255 255 255 / 0.5);
-  pointer-events: none;
 }

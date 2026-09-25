@@ -1,6 +1,6 @@
 .process {
   position: relative;
-  background: linear-gradient(var(--bg), var(--bg-elev));
+  background: var(--bg);
 }
 
 .process__pin {
@@ -29,20 +29,19 @@
   min-height: 280px;
   padding: clamp(28px, 3vw, 40px);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--line);
-  background:
-    radial-gradient(ellipse 80% 60% at 100% 0%, rgb(41 151 255 / 0.1), transparent 70%),
-    var(--surface);
+  background: var(--bg-alt);
 }
 
 .step--final {
   background:
-    radial-gradient(ellipse 90% 80% at 100% 0%, rgb(124 92 255 / 0.3), transparent 70%),
-    radial-gradient(ellipse 80% 70% at 0% 100%, rgb(41 151 255 / 0.2), transparent 70%),
-    var(--surface);
+    radial-gradient(ellipse 90% 80% at 100% 0%, rgb(110 79 246 / 0.14), transparent 70%),
+    radial-gradient(ellipse 80% 70% at 0% 100%, rgb(0 113 227 / 0.1), transparent 70%),
+    var(--bg-alt);
 }
 
 .step__num {
+  display: inline-block;
+  align-self: flex-start;
   font-size: clamp(4rem, 8vw, 6.5rem);
   font-weight: 700;
   line-height: 1;
@@ -68,8 +67,8 @@
 
 .process__progress {
   display: none;
-  height: 2px;
-  border-radius: 2px;
+  height: 3px;
+  border-radius: 3px;
   background: var(--line);
   overflow: hidden;
 }

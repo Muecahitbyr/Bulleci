@@ -52,7 +52,7 @@
   width: calc(var(--rating) / 5 * 100%);
   overflow: hidden;
   white-space: nowrap;
-  color: var(--orange);
+  color: var(--star);
 }
 
 .stats {
@@ -67,7 +67,8 @@
   gap: 6px;
   padding: 36px 24px;
   border-radius: var(--radius);
-  background: var(--light-surface);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
 }
 
 .stat__value {
