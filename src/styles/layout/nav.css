@@ -151,6 +151,7 @@
 .nav.is-open .mobile-menu__links a:nth-child(4) { transition-delay: 0.12s; }
 .nav.is-open .mobile-menu__links a:nth-child(5) { transition-delay: 0.16s; }
 .nav.is-open .mobile-menu__links a:nth-child(6) { transition-delay: 0.2s; }
+.nav.is-open .mobile-menu__links a:nth-child(7) { transition-delay: 0.24s; }
 
 .mobile-menu__links .mobile-menu__call {
   margin-top: 24px;

@@ -55,6 +55,10 @@ Der Inhalt von `dist/` kann auf jeden statischen Hoster hochgeladen werden
   Übersicht aller Bilder und Formate: `public/images/README.md`.
 - **Header / Footer:** in `partials/` – gilt sofort für alle Seiten.
 - **Leistungen:** direkt in `index.html` im Abschnitt `#leistungen`.
+- **Tuning-Beispiele:** in `index.html` im Abschnitt `#software` (`data-stock` / `data-tuned` = PS Serie / Stage 1).
+- **Anfrageformular:** Ziel-Adresse in `src/config/business.js` (`tuningFormEndpoint`). Das Formular schickt
+  Name, Telefon, E-Mail, Wunsch, Nachricht und das Foto (`fahrzeugschein`, große Fotos werden vorher verkleinert)
+  als `multipart/form-data`. Solange keine Adresse eingetragen ist, wird stattdessen auf das Telefon verwiesen.
 - **Farben, Schriftgrößen, Abstände:** zentral in `src/styles/base/tokens.css`.
 
 ## Animationen
@@ -68,6 +72,11 @@ Der Inhalt von `dist/` kann auf jeden statischen Hoster hochgeladen werden
 | Vorher/Nachher-Slider               | `js/modules/compare.js`       |
 | Einblenden beim Scrollen (`data-reveal`) | `js/modules/reveal.js`   |
 | Zähler, Karten-Spotlight            | `counters.js`, `spotlight.js` |
+| Überschriften Wort für Wort (`data-split`) | `js/modules/split-text.js` |
+| Kacheln: Bild-Zoom, Tiefen-Effekt (Handy) | `js/modules/tiles.js`   |
+| Drehzahlmesser Softwareoptimierung  | `js/modules/gauge.js`         |
+| Tuning-Beispiele + Anfrageformular  | `js/modules/tuning.js`        |
+| Sterne, Icons, Checkliste, Scroll-Fortschritt | `js/modules/accents.js` |
 
 Bei aktivierter Systemeinstellung „Bewegung reduzieren“ werden alle
 Animationen automatisch deaktiviert und alle Inhalte sofort angezeigt.
@@ -94,5 +103,6 @@ Getestet ohne horizontales Überlaufen auf:
 - [ ] Impressum: Inhabername, E-Mail, ggf. USt-IdNr. und Handwerkskammer ergänzen
 - [ ] Datenschutzerklärung: Hoster eintragen und rechtlich prüfen lassen
 - [ ] Leistungsumfang mit dem Betrieb abstimmen
+- [ ] Softwareoptimierung: Beispielwerte prüfen, Formular-Ziel in `src/config/business.js` (`tuningFormEndpoint`) eintragen und in der Datenschutzerklärung nennen
 - [ ] Eigene Fotos einsetzen (aktuell Unsplash-Platzhalter), v. a. echtes Vorher/Nachher
 - [ ] Domain in `public/robots.txt` eintragen, ggf. `sitemap.xml` ergänzen

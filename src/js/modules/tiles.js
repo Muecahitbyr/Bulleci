@@ -32,7 +32,7 @@ export function initTiles() {
 
   // Tiefen-Effekt nur im einspaltigen Layout
   gsap.matchMedia().add('(max-width: 699px)', () => {
-    gsap.utils.toArray('.tile, .stat, .contact .card, .compare').forEach((el) => {
+    gsap.utils.toArray('.tile, .car, .stat, .contact .card, .compare').forEach((el) => {
       gsap.fromTo(
         el,
         { scale: 0.88, borderRadius: 40 },
