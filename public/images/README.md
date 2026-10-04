@@ -12,7 +12,7 @@ dafür nicht angepasst werden. Am besten eigene Fotos aus der Werkstatt verwende
 | `glanz.jpg`          | Foto im Schriftzug „Glanz.“                 | Quer, kontrastreich     |
 | `vorher.jpg`         | Vorher/Nachher-Slider – Vorher              | 10:7, z. B. 1400 × 980  |
 | `nachher.jpg`        | Vorher/Nachher-Slider – Nachher             | gleicher Ausschnitt!    |
-| `fahrzeugpflege.jpg` | Große Kachel Fahrzeugpflege                 | Hoch- oder Querformat   |
+| `fahrzeugpflege.jpg` | Große Kachel Fahrzeugaufbereitung                | Hoch- oder Querformat   |
 | `smart-repair.jpg`   | Große Kachel Smart Repair                   | Quer, ca. 1400 × 930    |
 | `politur.jpg`, `versiegelung.jpg`, `innenraum.jpg`, `leder.jpg`, `scheinwerfer.jpg`, `dellen.jpg`, `kratzer.jpg`, `steinschlag.jpg`, `felgen.jpg` | Leistungs-Kacheln | 4:3, ca. 900 × 700 |
 

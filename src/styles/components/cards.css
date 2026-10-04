@@ -218,3 +218,94 @@
     font-size: 0.8125rem;
   }
 }
+
+/* Dunkle Kachel mit Grafik statt Foto (Softwareoptimierung) */
+.tile--dark {
+  color: #fff;
+  background:
+    radial-gradient(ellipse 70% 80% at 85% 50%, rgb(110 79 246 / 0.28), transparent 70%),
+    radial-gradient(ellipse 60% 70% at 0% 100%, rgb(0 113 227 / 0.22), transparent 70%),
+    #0b0b10;
+}
+
+.tile--dark .eyebrow,
+.tile--dark .tile__text {
+  color: rgb(255 255 255 / 0.72);
+}
+
+.tile--wide {
+  justify-content: center;
+}
+
+.tile--wide .tile__body {
+  max-width: 620px;
+}
+
+/* Drehzahlmesser */
+.gauge {
+  order: -1;
+  width: min(100%, 340px);
+  margin: clamp(28px, 4vw, 40px) auto 0;
+  padding-inline: 24px;
+}
+
+.gauge svg {
+  width: 100%;
+  overflow: visible;
+}
+
+.gauge__track,
+.gauge__value {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+.gauge__track {
+  stroke: rgb(255 255 255 / 0.1);
+}
+
+.gauge__value {
+  stroke: url(#gauge-gradient);
+  stroke-dasharray: 1;
+  filter: drop-shadow(0 0 6px rgb(110 79 246 / 0.6));
+}
+
+.gauge__ticks line {
+  stroke: rgb(255 255 255 / 0.55);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.gauge__ticks .gauge__minor {
+  stroke: rgb(255 255 255 / 0.25);
+  stroke-width: 1.5;
+}
+
+.gauge__labels text,
+.gauge__unit {
+  fill: rgb(255 255 255 / 0.6);
+  font-size: 11px;
+  font-weight: 600;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.gauge__unit {
+  font-size: 9px;
+  fill: rgb(255 255 255 / 0.4);
+  letter-spacing: 0.04em;
+}
+
+.gauge__needle line {
+  stroke: #fff;
+  stroke-width: 3;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 4px rgb(255 255 255 / 0.5));
+}
+
+.gauge__needle circle {
+  fill: #fff;
+  stroke: #0b0b10;
+  stroke-width: 3;
+}
