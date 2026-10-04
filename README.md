@@ -64,7 +64,6 @@ Der Inhalt von `dist/` kann auf jeden statischen Hoster hochgeladen werden
 | Hero: Intro + Bild öffnet sich auf volle Breite | `js/modules/hero.js` |
 | Bild-Parallax (`data-parallax-img`, `data-band-img`) | `js/modules/parallax.js` |
 | Text leuchtet Wort für Wort auf     | `js/modules/text-highlight.js`|
-| „Glanz.“-Zoom (gepinnt)             | `js/modules/gloss.js`         |
 | Horizontaler Ablauf-Scroll          | `js/modules/process.js`       |
 | Vorher/Nachher-Slider               | `js/modules/compare.js`       |
 | Einblenden beim Scrollen (`data-reveal`) | `js/modules/reveal.js`   |

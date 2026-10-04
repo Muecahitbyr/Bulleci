@@ -10,7 +10,6 @@ import { initTextHighlight } from './js/modules/text-highlight.js';
 import { initSplitText } from './js/modules/split-text.js';
 import { initReveal } from './js/modules/reveal.js';
 import { initParallax } from './js/modules/parallax.js';
-import { initGloss } from './js/modules/gloss.js';
 import { initProcess } from './js/modules/process.js';
 import { initCompare } from './js/modules/compare.js';
 import { initCounters } from './js/modules/counters.js';
@@ -29,7 +28,6 @@ initMisc();
 // Reihenfolge wichtig: gepinnte Abschnitte von oben nach unten anlegen
 initHero();
 initTextHighlight();
-initGloss();
 initProcess();
 
 initSplitText();

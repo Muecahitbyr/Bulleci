@@ -9,7 +9,6 @@ dafür nicht angepasst werden. Am besten eigene Fotos aus der Werkstatt verwende
 | `logo-96/192/512.png`| Logo in Navigation, Footer, App-Icon        | quadratisch, transparent|
 | `hero.jpg`           | Großes Startbild                            | Quer, ca. 2000 × 1125   |
 | `werkstatt.jpg`      | Vollbild-Band „Jedes Detail. Von Hand.“     | Quer, ca. 2000 × 1000   |
-| `glanz.jpg`          | Foto im Schriftzug „Glanz.“                 | Quer, kontrastreich     |
 | `vorher.jpg`         | Vorher/Nachher-Slider – Vorher              | 10:7, z. B. 1400 × 980  |
 | `nachher.jpg`        | Vorher/Nachher-Slider – Nachher             | gleicher Ausschnitt!    |
 | `fahrzeugpflege.jpg` | Große Kachel Fahrzeugaufbereitung                | Hoch- oder Querformat   |
@@ -28,7 +27,6 @@ Alle Platzhalter-Fotos stammen von [Unsplash](https://unsplash.com) und stehen u
 | -------------------- | -------------------------------- |
 | hero.jpg             | photo-1608506375591-b90e1f955e4b |
 | werkstatt.jpg        | photo-1607860108855-64acf2078ed9 |
-| glanz.jpg            | photo-1575844611093-ed16474b4f44 |
 | nachher.jpg          | photo-1708805282706-f44730b7e527 |
 | fahrzeugpflege.jpg   | photo-1694678505383-676d78ea3b96 |
 | politur.jpg          | photo-1632823470270-a7d3d03c3e20 |
