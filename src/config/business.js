@@ -15,10 +15,8 @@ export const business = {
   reviewCount: 66,
   timeZone: 'Europe/Berlin',
 
-  // Anfrageformular Softwareoptimierung: Adresse, an die das Formular (inkl. Foto) per POST
-  // als multipart/form-data geschickt wird – z. B. ein Formspree-Formular oder ein eigenes
-  // PHP-Skript beim Hoster. Leer = Formular zeigt stattdessen den Hinweis zum Anrufen.
-  tuningFormEndpoint: '',
+  // Empfänger der Tuning-Anfragen (das Formular öffnet das E-Mail-Programm des Besuchers)
+  email: 'anfrage@example.com',
 
   // 0 = Sonntag … 6 = Samstag
   hours: {

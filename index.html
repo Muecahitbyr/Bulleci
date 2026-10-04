@@ -325,7 +325,7 @@
       </section>
 
       <!-- ============ SOFTWAREOPTIMIERUNG (Beispiele + Anfrage) ============ -->
-      <!-- Beispielwerte bitte mit dem Betrieb abstimmen. Ziel des Formulars: src/config/business.js -->
+      <!-- Beispielwerte (PS/Preise) bitte mit dem Betrieb abstimmen. E-Mail-Adresse: src/config/business.js -->
       <section class="tuning section" id="software">
         <div class="tuning__glow" aria-hidden="true"></div>
         <div class="container">
@@ -339,10 +339,14 @@
           </header>
 
           <div class="tuning__grid">
-          <article class="car" data-reveal data-car data-stock="600" data-tuned="650">
+          <article class="car" data-reveal data-car data-stock="600" data-max="800"
+            data-stage-1="650" data-price-1="200" data-stage-2="720" data-price-2="300">
             <div class="car__head">
               <p class="car__brand">BMW</p>
-              <span class="car__stage">Stage 1</span>
+              <div class="car__toggle" role="group" aria-label="Stufe wählen">
+                <button type="button" aria-pressed="true" data-car-stage="1">Stage 1</button>
+                <button type="button" aria-pressed="false" data-car-stage="2">Stage 2</button>
+              </div>
             </div>
             <h3 class="car__model">M5 <span>F90</span></h3>
             <p class="car__meta">2017–2024 · 4.4 V8 Biturbo</p>
@@ -350,18 +354,26 @@
             <dl class="car__bars">
               <div class="car__row">
                 <dt>Serie</dt>
-                <dd><span class="car__bar" style="--w: 0.857"><span data-car-bar></span></span><b>600 PS</b></dd>
+                <dd><span class="car__bar" style="--w: 0.750"><span data-car-bar></span></span><b>600 PS</b></dd>
               </div>
               <div class="car__row car__row--tuned">
-                <dt>Stage 1</dt>
-                <dd><span class="car__bar" style="--w: 0.929"><span data-car-bar></span></span><b><span data-car-tuned>650</span> PS</b></dd>
+                <dt data-car-label>Stage 1</dt>
+                <dd><span class="car__bar" style="--w: 0.812" data-car-tuned-bar><span data-car-bar></span></span><b><span data-car-tuned>650</span> PS</b></dd>
               </div>
             </dl>
+            <div class="car__foot">
+              <p class="car__price">ab <strong data-car-price>200</strong> €</p>
+              <a class="car__ask" href="#anfrage" data-car-ask="BMW M5 F90">Anfragen <span aria-hidden="true">›</span></a>
+            </div>
           </article>
-          <article class="car" data-reveal data-car data-stock="612" data-tuned="662">
+          <article class="car" data-reveal data-car data-stock="612" data-max="800"
+            data-stage-1="662" data-price-1="250" data-stage-2="735" data-price-2="350">
             <div class="car__head">
               <p class="car__brand">Mercedes-AMG</p>
-              <span class="car__stage">Stage 1</span>
+              <div class="car__toggle" role="group" aria-label="Stufe wählen">
+                <button type="button" aria-pressed="true" data-car-stage="1">Stage 1</button>
+                <button type="button" aria-pressed="false" data-car-stage="2">Stage 2</button>
+              </div>
             </div>
             <h3 class="car__model">E 63 S <span>W213</span></h3>
             <p class="car__meta">2016–2023 · 4.0 V8 Biturbo</p>
@@ -369,18 +381,26 @@
             <dl class="car__bars">
               <div class="car__row">
                 <dt>Serie</dt>
-                <dd><span class="car__bar" style="--w: 0.874"><span data-car-bar></span></span><b>612 PS</b></dd>
+                <dd><span class="car__bar" style="--w: 0.765"><span data-car-bar></span></span><b>612 PS</b></dd>
               </div>
               <div class="car__row car__row--tuned">
-                <dt>Stage 1</dt>
-                <dd><span class="car__bar" style="--w: 0.946"><span data-car-bar></span></span><b><span data-car-tuned>662</span> PS</b></dd>
+                <dt data-car-label>Stage 1</dt>
+                <dd><span class="car__bar" style="--w: 0.828" data-car-tuned-bar><span data-car-bar></span></span><b><span data-car-tuned>662</span> PS</b></dd>
               </div>
             </dl>
+            <div class="car__foot">
+              <p class="car__price">ab <strong data-car-price>250</strong> €</p>
+              <a class="car__ask" href="#anfrage" data-car-ask="Mercedes-AMG E 63 S W213">Anfragen <span aria-hidden="true">›</span></a>
+            </div>
           </article>
-          <article class="car" data-reveal data-car data-stock="600" data-tuned="650">
+          <article class="car" data-reveal data-car data-stock="600" data-max="800"
+            data-stage-1="650" data-price-1="220" data-stage-2="715" data-price-2="320">
             <div class="car__head">
               <p class="car__brand">Audi</p>
-              <span class="car__stage">Stage 1</span>
+              <div class="car__toggle" role="group" aria-label="Stufe wählen">
+                <button type="button" aria-pressed="true" data-car-stage="1">Stage 1</button>
+                <button type="button" aria-pressed="false" data-car-stage="2">Stage 2</button>
+              </div>
             </div>
             <h3 class="car__model">RS 6 Avant <span>C8</span></h3>
             <p class="car__meta">2019–2023 · 4.0 V8 TFSI</p>
@@ -388,19 +408,23 @@
             <dl class="car__bars">
               <div class="car__row">
                 <dt>Serie</dt>
-                <dd><span class="car__bar" style="--w: 0.857"><span data-car-bar></span></span><b>600 PS</b></dd>
+                <dd><span class="car__bar" style="--w: 0.750"><span data-car-bar></span></span><b>600 PS</b></dd>
               </div>
               <div class="car__row car__row--tuned">
-                <dt>Stage 1</dt>
-                <dd><span class="car__bar" style="--w: 0.929"><span data-car-bar></span></span><b><span data-car-tuned>650</span> PS</b></dd>
+                <dt data-car-label>Stage 1</dt>
+                <dd><span class="car__bar" style="--w: 0.812" data-car-tuned-bar><span data-car-bar></span></span><b><span data-car-tuned>650</span> PS</b></dd>
               </div>
             </dl>
+            <div class="car__foot">
+              <p class="car__price">ab <strong data-car-price>220</strong> €</p>
+              <a class="car__ask" href="#anfrage" data-car-ask="Audi RS 6 Avant C8">Anfragen <span aria-hidden="true">›</span></a>
+            </div>
           </article>
           </div>
 
           <p class="tuning__note" data-reveal>
             Beispielwerte. Die tatsächliche Mehrleistung hängt von Fahrzeug, Zustand und Softwarestand ab.
-            Stage 2 und individuelle Abstimmungen auf Anfrage.
+            Preise inkl. MwSt.
           </p>
 
           <div class="request" id="anfrage" data-reveal>
@@ -408,48 +432,27 @@
               <p class="eyebrow">Kostenlose Anfrage</p>
               <h3 class="request__title">Was steckt in Ihrem Auto?</h3>
               <p class="request__text">
-                Schicken Sie uns ein Foto Ihres Fahrzeugscheins. Wir melden uns mit der möglichen
-                Mehrleistung und dem Preis – kostenlos und unverbindlich.
+                Schicken Sie uns eine E-Mail mit einem Foto Ihres Fahrzeugscheins. Wir melden uns mit
+                der möglichen Mehrleistung und dem Preis – kostenlos und unverbindlich.
               </p>
               <ol class="request__steps">
-                <li>Foto vom Fahrzeugschein hochladen</li>
-                <li>Wir prüfen Ihr Fahrzeug</li>
+                <li>Fahrzeug eintragen</li>
+                <li>E-Mail öffnet sich – Foto vom Fahrzeugschein anhängen</li>
                 <li>Sie erhalten Leistung &amp; Preis</li>
               </ol>
             </div>
 
             <form class="request__form" data-tuning-form novalidate>
-              <label class="upload" data-upload>
-                <input class="upload__input" type="file" name="fahrzeugschein" accept="image/*,application/pdf" required data-upload-input />
-                <span class="upload__empty">
-                  <svg class="upload__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z" /><circle cx="12" cy="13" r="3.5" /></svg>
-                  <strong>Foto vom Fahrzeugschein</strong>
-                  <span>Tippen zum Fotografieren oder Auswählen</span>
-                </span>
-                <span class="upload__preview" hidden data-upload-preview>
-                  <img alt="" data-upload-img />
-                  <span class="upload__file">
-                    <strong data-upload-name></strong>
-                    <span>Tippen zum Ändern</span>
-                  </span>
-                </span>
-              </label>
-              <p class="field__hint">Name und Adresse dürfen Sie abdecken – wir brauchen nur die Fahrzeugdaten.</p>
-
               <div class="field-row">
                 <label class="field">
-                  <span class="field__label">Name *</span>
-                  <input type="text" name="name" autocomplete="name" required />
+                  <span class="field__label">Fahrzeug *</span>
+                  <input type="text" name="fahrzeug" placeholder="z. B. BMW M5 F90" required />
                 </label>
                 <label class="field">
-                  <span class="field__label">Telefon *</span>
-                  <input type="tel" name="telefon" autocomplete="tel" required />
+                  <span class="field__label">Baujahr</span>
+                  <input type="text" name="baujahr" inputmode="numeric" placeholder="z. B. 2019" />
                 </label>
               </div>
-              <label class="field">
-                <span class="field__label">E-Mail</span>
-                <input type="email" name="email" autocomplete="email" />
-              </label>
 
               <fieldset class="segmented">
                 <legend class="field__label">Ihr Wunsch</legend>
@@ -458,28 +461,30 @@
                 <label><input type="radio" name="wunsch" value="Beratung" /><span>Beratung</span></label>
               </fieldset>
 
+              <div class="field-row">
+                <label class="field">
+                  <span class="field__label">Name</span>
+                  <input type="text" name="name" autocomplete="name" />
+                </label>
+                <label class="field">
+                  <span class="field__label">Telefon</span>
+                  <input type="tel" name="telefon" autocomplete="tel" />
+                </label>
+              </div>
+
               <label class="field">
                 <span class="field__label">Nachricht</span>
                 <textarea name="nachricht" rows="3" placeholder="z. B. Laufleistung, bisherige Umbauten …"></textarea>
               </label>
 
-              <!-- Spamschutz: bleibt für Menschen unsichtbar und leer -->
-              <input class="request__trap" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+              <div class="attach-hint">
+                <svg class="attach-hint__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z" /><circle cx="12" cy="13" r="3.5" /></svg>
+                <p><strong>Foto vom Fahrzeugschein</strong> einfach in der E-Mail anhängen. Name und Adresse dürfen Sie abdecken.</p>
+              </div>
 
-              <label class="check">
-                <input type="checkbox" name="datenschutz" value="ja" required />
-                <span>Ich bin einverstanden, dass meine Angaben und das Foto zur Bearbeitung meiner Anfrage verarbeitet werden (<a href="/datenschutz.html#anfrage">Datenschutz</a>).</span>
-              </label>
-
-              <button class="btn btn--primary btn--lg btn--shine request__submit" type="submit">Kostenlos anfragen</button>
+              <button class="btn btn--primary btn--lg btn--shine request__submit" type="submit">E-Mail-Anfrage öffnen</button>
               <p class="request__status" role="status" aria-live="polite" data-form-status></p>
             </form>
-
-            <div class="request__done" hidden tabindex="-1" data-form-done>
-              <svg class="request__check" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" /><path d="M15 27l7 7 15-16" /></svg>
-              <h3 class="request__title">Anfrage gesendet!</h3>
-              <p class="request__text">Danke! Wir prüfen Ihr Fahrzeug und melden uns schnellstmöglich bei Ihnen.</p>
-            </div>
           </div>
         </div>
       </section>

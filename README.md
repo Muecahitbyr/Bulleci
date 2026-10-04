@@ -55,11 +55,10 @@ Der Inhalt von `dist/` kann auf jeden statischen Hoster hochgeladen werden
   Übersicht aller Bilder und Formate: `public/images/README.md`.
 - **Header / Footer:** in `partials/` – gilt sofort für alle Seiten.
 - **Leistungen:** direkt in `index.html` im Abschnitt `#leistungen`.
-- **Tuning-Beispiele:** in `index.html` im Abschnitt `#software` (`data-stock` / `data-tuned` = PS Serie / Stage 1).
-- **Anfrageformular:** Ziel-Adresse in `src/config/business.js` (`tuningFormEndpoint`). Das Formular schickt
-  Name, Telefon, E-Mail, Wunsch, Nachricht und das Foto (`fahrzeugschein`, große Fotos werden vorher verkleinert)
-  als `multipart/form-data`. Solange keine Adresse eingetragen ist, wird stattdessen auf das Telefon verwiesen.
-- **Farben, Schriftgrößen, Abstände:** zentral in `src/styles/base/tokens.css`.
+- **Tuning-Beispiele:** in `index.html` im Abschnitt `#software`
+  (`data-stock` = Serie, `data-stage-1/2` = PS, `data-price-1/2` = Preis in €).
+- **Anfrage:** Das Formular öffnet das E-Mail-Programm mit vorausgefüllter Nachricht.
+  Empfänger-Adresse in `src/config/business.js` (`email`).
 
 ## Animationen
 
@@ -103,6 +102,6 @@ Getestet ohne horizontales Überlaufen auf:
 - [ ] Impressum: Inhabername, E-Mail, ggf. USt-IdNr. und Handwerkskammer ergänzen
 - [ ] Datenschutzerklärung: Hoster eintragen und rechtlich prüfen lassen
 - [ ] Leistungsumfang mit dem Betrieb abstimmen
-- [ ] Softwareoptimierung: Beispielwerte prüfen, Formular-Ziel in `src/config/business.js` (`tuningFormEndpoint`) eintragen und in der Datenschutzerklärung nennen
+- [ ] Softwareoptimierung: Beispielwerte (PS, Preise) prüfen, echte E-Mail-Adresse in `src/config/business.js` (`email`) eintragen
 - [ ] Eigene Fotos einsetzen (aktuell Unsplash-Platzhalter), v. a. echtes Vorher/Nachher
 - [ ] Domain in `public/robots.txt` eintragen, ggf. `sitemap.xml` ergänzen
