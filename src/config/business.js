@@ -5,7 +5,7 @@
  */
 export const business = {
   name: 'M. Bulleci Fahrzeugpflege & Smartrepair',
-  shortName: 'Bulleci',
+  shortName: 'Fahrzeugaufbereitung',
   phone: '08341 9546110',
   phoneHref: 'tel:+4983419546110',
   street: 'Wolftrigelstraße 1 A',

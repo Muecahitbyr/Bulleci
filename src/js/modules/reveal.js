@@ -17,11 +17,11 @@ export function initReveal() {
       gsap.to(batch, {
         opacity: 1,
         y: 0,
-        scale: 1,
         duration: 1.1,
         ease: 'expo.out',
         stagger: 0.08,
-        overwrite: true,
+        // nur y/opacity – Scrub-Tweens (z. B. scale) auf denselben Elementen bleiben erhalten
+        overwrite: 'auto',
       }),
   });
 }

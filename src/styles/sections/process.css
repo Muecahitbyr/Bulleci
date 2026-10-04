@@ -81,6 +81,35 @@
   transform: scaleX(0);
 }
 
+/* Mobil: Karten stapeln sich beim Scrollen übereinander */
+@media (max-width: 899px) {
+  .has-motion .process__pin {
+    overflow: visible;
+  }
+
+  .has-motion .step {
+    position: sticky;
+    top: calc(var(--nav-h) + 20px + var(--stack, 0) * 14px);
+    box-shadow: 0 -12px 40px -18px rgb(0 0 0 / 0.18);
+    transform-origin: 50% 0;
+  }
+
+  .has-motion .step:nth-child(2) { --stack: 1; }
+  .has-motion .step:nth-child(3) { --stack: 2; }
+  .has-motion .step:nth-child(4) { --stack: 3; }
+
+  /* Verdeckte Karten verblassen (--dim per JS) */
+  .has-motion .step::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: var(--bg);
+    opacity: var(--dim, 0);
+    pointer-events: none;
+  }
+}
+
 @media (min-width: 900px) {
   .process__pin {
     min-height: 100svh;

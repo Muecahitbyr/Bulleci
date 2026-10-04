@@ -1,0 +1,121 @@
+/* Animations-Helfer (Zustände werden per JS gesetzt, nur mit .has-motion aktiv) */
+
+/* Wort-Masken für [data-split] – Platz für Unterlängen ohne größeren Zeilenabstand */
+.split-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
+}
+
+.split-word {
+  display: inline-block;
+  transform-origin: 0 100%;
+}
+
+/* Scroll-Fortschritt unter der Navigation */
+.nav__progress {
+  display: none;
+}
+
+.has-motion .nav__progress {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+.has-motion .nav.is-scrolled .nav__progress {
+  opacity: 1;
+}
+
+/* Lichtreflex, der regelmäßig über wichtige Buttons wandert */
+.btn--shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.has-motion .btn--shine::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(105deg, transparent 35%, rgb(255 255 255 / 0.45) 50%, transparent 65%);
+  translate: -120% 0;
+  animation: shine 4.5s var(--ease-in-out) 2s infinite;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  0% { translate: -120% 0; }
+  30%,
+  100% { translate: 120% 0; }
+}
+
+/* Checkliste: Haken ploppen nacheinander auf */
+.has-motion .checklist li::before {
+  scale: 0;
+  rotate: -90deg;
+  transition:
+    scale 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
+    rotate 0.7s var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 0.1s + 0.25s);
+}
+
+.has-motion .checklist.is-in li::before {
+  scale: 1;
+  rotate: 0deg;
+}
+
+/* Sanftes Schweben (Karten-Pin) und atmender Lichtschein (CTA) */
+@keyframes float {
+  to { translate: 0 -10px; }
+}
+
+@keyframes breathe {
+  to {
+    scale: 1.18;
+    opacity: 0.6;
+  }
+}
+
+.has-motion .cta__glow {
+  animation: breathe 5s var(--ease-in-out) infinite alternate;
+}
+
+/* Touch-Geräte: spürbares Feedback beim Antippen */
+@media (hover: none) {
+  .tile,
+  .card,
+  .stat {
+    transition: scale 0.4s var(--ease-out);
+  }
+
+  /* !important: GSAP setzt inline scale: none (siehe cards.css) */
+  .tile:active,
+  .card:active,
+  .stat:active {
+    scale: 0.97 !important;
+  }
+
+  .btn:active {
+    transform: scale(0.95);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .map__pin,
+  .text-gradient {
+    animation: none;
+  }
+}

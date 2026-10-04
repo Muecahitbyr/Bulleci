@@ -164,6 +164,19 @@
   }
 }
 
+/* Schmale Handys: Markenname kompakter, damit er neben dem Menü-Button Platz hat */
+@media (max-width: 389px) {
+  .nav__brand {
+    gap: 8px;
+    font-size: 0.95rem;
+  }
+
+  .nav__logo {
+    width: 34px;
+    height: 34px;
+  }
+}
+
 @media (min-width: 900px) {
   .nav__links {
     display: flex;

@@ -72,14 +72,15 @@
     translate 0.6s var(--ease-out);
 }
 
+/* !important: GSAP setzt inline translate/scale: none, sobald es transform animiert */
 @media (hover: hover) {
   .tile:hover {
     box-shadow: var(--shadow);
-    translate: 0 -4px;
+    translate: 0 -4px !important;
   }
 
   .tile:hover .tile__media img {
-    scale: 1.05;
+    scale: 1.05 !important;
   }
 }
 
