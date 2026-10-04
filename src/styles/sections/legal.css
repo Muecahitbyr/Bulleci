@@ -4,8 +4,8 @@
 
 .page-legal .nav {
   background: rgb(255 255 255 / 0.78);
-  backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
   border-bottom-color: var(--line);
 }
 

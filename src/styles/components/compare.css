@@ -32,8 +32,8 @@
   padding: 6px 12px;
   border-radius: var(--pill);
   background: rgb(255 255 255 / 0.85);
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   color: var(--text);
   font-size: 0.75rem;
   font-weight: 600;

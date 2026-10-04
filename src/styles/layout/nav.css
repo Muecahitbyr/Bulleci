@@ -5,16 +5,31 @@
   height: var(--nav-h);
   transition:
     transform 0.5s var(--ease-out),
-    background-color 0.4s,
     border-color 0.4s;
   border-bottom: 1px solid transparent;
 }
 
+/* Milchglas auf eigener Ebene: backdrop-filter direkt auf .nav würde das
+   fixierte Handy-Menü auf die Höhe der Leiste begrenzen */
+.nav::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  background: rgb(255 255 255 / 0.78);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  transition: opacity 0.4s;
+}
+
+.nav.is-scrolled::before,
+.nav.is-open::before {
+  opacity: 1;
+}
+
 .nav.is-scrolled,
 .nav.is-open {
-  background: rgb(255 255 255 / 0.78);
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
   border-bottom-color: var(--line);
 }
 
@@ -106,8 +121,8 @@
   position: fixed;
   inset: var(--nav-h) 0 0;
   background: rgb(255 255 255 / 0.96);
-  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   overflow-y: auto;
   overscroll-behavior: contain;
   padding-bottom: env(safe-area-inset-bottom);

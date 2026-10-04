@@ -111,8 +111,8 @@
   padding: 8px 20px 8px 8px;
   border-radius: var(--pill);
   background: rgb(255 255 255 / 0.8);
-  backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
   box-shadow: var(--shadow);
   text-align: left;
   font-size: 0.8125rem;
